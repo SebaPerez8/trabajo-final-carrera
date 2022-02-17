@@ -93,6 +93,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="clientes.aspx" />
+    <Content Include="productos.aspx" />
+    <Content Include="proveedores.aspx" />
     <Content Include="Tema\css\sb-admin-2.css" />
     <Content Include="Tema\css\sb-admin-2.min.css" />
     <Content Include="Tema\img\logo.svg" />
@@ -1807,6 +1809,20 @@
       <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="productos.aspx.designer.vb">
+      <DependentUpon>productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="productos.aspx.vb">
+      <DependentUpon>productos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="proveedores.aspx.designer.vb">
+      <DependentUpon>proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="proveedores.aspx.vb">
+      <DependentUpon>proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -2007,6 +2023,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
