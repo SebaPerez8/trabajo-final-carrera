@@ -53,6 +53,7 @@
             </div>
         </div>
         <div align="center">
+            <asp:Button ID="Button1" runat="server" Text="Button" />
             <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary m-3" />
             <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-success m-3" />
             <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3" />
