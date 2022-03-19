@@ -92,6 +92,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="administrarOrdenes.aspx" />
     <Content Include="clientes.aspx" />
     <Content Include="productos.aspx" />
     <Content Include="proveedores.aspx" />
@@ -1776,6 +1777,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="administrarOrdenes.aspx.designer.vb">
+      <DependentUpon>administrarOrdenes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="administrarOrdenes.aspx.vb">
+      <DependentUpon>administrarOrdenes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="clientes.aspx.designer.vb">
       <DependentUpon>clientes.aspx</DependentUpon>
     </Compile>
