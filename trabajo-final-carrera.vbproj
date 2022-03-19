@@ -92,10 +92,16 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ABM_clientesModificar.aspx" />
+    <Content Include="ABM_clientesEliminar.aspx" />
+    <Content Include="ABM_productosEliminar.aspx" />
+    <Content Include="ABM_productosModificar.aspx" />
+    <Content Include="ABM_proveedoresEliminar.aspx" />
+    <Content Include="ABM_proveedoresModificar.aspx" />
     <Content Include="administrarOrdenes.aspx" />
-    <Content Include="clientes.aspx" />
-    <Content Include="productos.aspx" />
-    <Content Include="proveedores.aspx" />
+    <Content Include="ABM_clientesCargar.aspx" />
+    <Content Include="ABM_productosCargar.aspx" />
+    <Content Include="ABM_proveedoresCargar.aspx" />
     <Content Include="Tema\css\sb-admin-2.css" />
     <Content Include="Tema\css\sb-admin-2.min.css" />
     <Content Include="Tema\img\logo.svg" />
@@ -1777,6 +1783,48 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABM_clientesModificar.aspx.designer.vb">
+      <DependentUpon>ABM_clientesModificar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM_clientesModificar.aspx.vb">
+      <DependentUpon>ABM_clientesModificar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ABM_clientesEliminar.aspx.designer.vb">
+      <DependentUpon>ABM_clientesEliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM_clientesEliminar.aspx.vb">
+      <DependentUpon>ABM_clientesEliminar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ABM_productosEliminar.aspx.designer.vb">
+      <DependentUpon>ABM_productosEliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM_productosEliminar.aspx.vb">
+      <DependentUpon>ABM_productosEliminar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ABM_productosModificar.aspx.designer.vb">
+      <DependentUpon>ABM_productosModificar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM_productosModificar.aspx.vb">
+      <DependentUpon>ABM_productosModificar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ABM_proveedoresEliminar.aspx.designer.vb">
+      <DependentUpon>ABM_proveedoresEliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM_proveedoresEliminar.aspx.vb">
+      <DependentUpon>ABM_proveedoresEliminar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ABM_proveedoresModificar.aspx.designer.vb">
+      <DependentUpon>ABM_proveedoresModificar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM_proveedoresModificar.aspx.vb">
+      <DependentUpon>ABM_proveedoresModificar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="administrarOrdenes.aspx.designer.vb">
       <DependentUpon>administrarOrdenes.aspx</DependentUpon>
     </Compile>
@@ -1784,11 +1832,11 @@
       <DependentUpon>administrarOrdenes.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="clientes.aspx.designer.vb">
-      <DependentUpon>clientes.aspx</DependentUpon>
+    <Compile Include="ABM_clientesCargar.aspx.designer.vb">
+      <DependentUpon>ABM_clientesCargar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="clientes.aspx.vb">
-      <DependentUpon>clientes.aspx</DependentUpon>
+    <Compile Include="ABM_clientesCargar.aspx.vb">
+      <DependentUpon>ABM_clientesCargar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -1817,18 +1865,18 @@
       <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="productos.aspx.designer.vb">
-      <DependentUpon>productos.aspx</DependentUpon>
+    <Compile Include="ABM_productosCargar.aspx.designer.vb">
+      <DependentUpon>ABM_productosCargar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="productos.aspx.vb">
-      <DependentUpon>productos.aspx</DependentUpon>
+    <Compile Include="ABM_productosCargar.aspx.vb">
+      <DependentUpon>ABM_productosCargar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="proveedores.aspx.designer.vb">
-      <DependentUpon>proveedores.aspx</DependentUpon>
+    <Compile Include="ABM_proveedoresCargar.aspx.designer.vb">
+      <DependentUpon>ABM_proveedoresCargar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="proveedores.aspx.vb">
-      <DependentUpon>proveedores.aspx</DependentUpon>
+    <Compile Include="ABM_proveedoresCargar.aspx.vb">
+      <DependentUpon>ABM_proveedoresCargar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

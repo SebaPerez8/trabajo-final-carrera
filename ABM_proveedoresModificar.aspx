@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Principal.Master" CodeBehind="proveedores.aspx.vb" Inherits="trabajo_final_carrera.proveedores" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Principal.Master" CodeBehind="ABM_proveedoresModificar.aspx.vb" Inherits="trabajo_final_carrera.ABM_proveedoresModificar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
 
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 d-flex justify-content-center">
@@ -13,6 +13,21 @@
             </div>
         </div>
     </div>
+
+    <div class="pb-3">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="ABM_proveedoresCargar.aspx">Cargar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ABM_proveedoresEliminar.aspx">Eliminar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active">Modificar</a>
+            </li>
+        </ul>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 d-flex">
@@ -21,7 +36,7 @@
         </div>
     </div>
 
-    <form id="formProveedores" runat="server">
+    <form id="formProveedoresModificar" runat="server">
         <div>
             <div class="input-group mb-3">
                 <span class="input-group-text">Razón social</span>
@@ -46,20 +61,10 @@
             </div>
         </div>
         <div align="center">
-            <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary m-3" />
             <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-success m-3" />
-            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3" />
-        </div>
-
-        <div class="container my-5">
-            <h4>Listado de proveedores</h4>
-
-
-            <asp:GridView ID="grillaProveedores" runat="server"></asp:GridView>
-
-
-
-        </div>
+        </div>   
 
     </form>
+
+
 </asp:Content>
