@@ -90,7 +90,7 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
-                        <a class="collapse-item" href="404.html">Administrar ordenes</a>
+                        <a class="collapse-item" href="administrarOrdenes.aspx">Administrar ordenes</a>
                         <a class="collapse-item" href="blank.html">Nueva orden</a>
                         <a class="collapse-item" href="blank.html">Pedido de insumos</a>
 
@@ -109,7 +109,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
 
 
-                        <a class="collapse-item" href="Parametricas/WebForm1.aspx">Clientes</a>
+                        <a class="collapse-item" href="clientes.aspx">Clientes</a>
                         <a class="collapse-item" href="proveedores.aspx">Proveedores</a>
                         <a class="collapse-item" href="productos.aspx">Productos</a>
 
