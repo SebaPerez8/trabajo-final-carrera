@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Principal.Master" CodeBehind="productos.aspx.vb" Inherits="trabajo_final_carrera.productos" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Principal.Master" CodeBehind="ABM_productosCargar.aspx.vb" Inherits="trabajo_final_carrera.productos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -6,6 +6,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 d-flex justify-content-center">
@@ -13,6 +14,21 @@
             </div>
         </div>
     </div>
+
+    <div class="pb-3">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active">Cargar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ABM_productosEliminar.aspx">Eliminar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ABM_productosModificar.aspx">Modificar</a>
+            </li>
+        </ul>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 d-flex">
@@ -21,7 +37,7 @@
         </div>
     </div>
 
-    <form id="formProductos" runat="server">
+    <form id="formProductosCargar" runat="server">
         <div>
             <div class="input-group mb-3">
                 <span class="input-group-text">Producto</span>
@@ -31,7 +47,7 @@
                 <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control"></asp:TextBox>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
                 <span class="input-group-text">Foto</span>
-                <asp:FileUpload ID="FileUpload1" runat="server" CssClass="btn-secondary m-auto p-1"/>
+                <asp:FileUpload ID="fuFoto" runat="server" CssClass="btn-secondary m-auto p-1"/>
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text">Categoria</span>
@@ -43,8 +59,6 @@
         </div>
         <div align="center">
             <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary m-3" />
-            <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-success m-3" />
-            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3" />
         </div>
 
         <div class="container my-5">
@@ -58,4 +72,5 @@
         </div>
 
     </form>
+
 </asp:Content>

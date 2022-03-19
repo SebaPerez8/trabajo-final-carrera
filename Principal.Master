@@ -109,9 +109,9 @@
                     <div class="bg-white py-2 collapse-inner rounded">
 
 
-                        <a class="collapse-item" href="clientes.aspx">Clientes</a>
-                        <a class="collapse-item" href="proveedores.aspx">Proveedores</a>
-                        <a class="collapse-item" href="productos.aspx">Productos</a>
+                        <a class="collapse-item" href="ABM_clientesCargar.aspx">Clientes</a>
+                        <a class="collapse-item" href="ABM_proveedoresCargar.aspx">Proveedores</a>
+                        <a class="collapse-item" href="ABM_productosCargar.aspx">Productos</a>
 
                     </div>
                 </div>

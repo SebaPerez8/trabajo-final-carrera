@@ -11,70 +11,61 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class clientes
+Partial Public Class ABM_productosModificar
 
     '''<summary>
-    '''Control formClientes.
+    '''Control formProductosModificar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents formClientes As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents formProductosModificar As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control txtNombre.
+    '''Control txtProducto.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtProducto As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtDNI.
+    '''Control txtPrecio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtDNI As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtPrecio As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtDireccion.
+    '''Control fuFoto.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtDireccion As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents fuFoto As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
-    '''Control txtCorreo.
+    '''Control txtCategoria.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtCorreo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtCategoria As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtTelefono.
+    '''Control txtFecha.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtTelefono As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control btnCargar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnCargar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents txtFecha As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control btnModificar.
@@ -84,22 +75,4 @@ Partial Public Class clientes
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnModificar As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control btnEliminar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnEliminar As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control grillaClientes.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents grillaClientes As Global.System.Web.UI.WebControls.GridView
 End Class

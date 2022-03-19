@@ -11,70 +11,70 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class productos
+Partial Public Class ABM_proveedoresModificar
 
     '''<summary>
-    '''Control formProductos.
+    '''Control formProveedoresModificar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents formProductos As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents formProveedoresModificar As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control txtProducto.
+    '''Control txtRazonSocial.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtProducto As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtRazonSocial As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtPrecio.
+    '''Control txtCUIL.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtPrecio As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtCUIL As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control FileUpload1.
+    '''Control txtLocalidad.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
+    Protected WithEvents txtLocalidad As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtCategoria.
+    '''Control txtCorreo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtCategoria As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtCorreo As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtFecha.
+    '''Control txtContacto.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtFecha As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtContacto As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control btnCargar.
+    '''Control txtTelefono.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnCargar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents txtTelefono As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control btnModificar.
@@ -84,22 +84,4 @@ Partial Public Class productos
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnModificar As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control btnEliminar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnEliminar As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control grillaProductos.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents grillaProductos As Global.System.Web.UI.WebControls.GridView
 End Class
