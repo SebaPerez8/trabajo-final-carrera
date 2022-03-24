@@ -6,7 +6,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 d-flex justify-content-center">
@@ -14,9 +14,12 @@
             </div>
         </div>
     </div>
-    
-     <div class="pb-3">
+
+    <div class="pb-3">
         <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="ABM_proveedoresListar.aspx">Listar</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link active">Cargar</a>
             </li>
@@ -38,42 +41,39 @@
     </div>
 
     <form id="formProveedoresCargar" runat="server">
+
         <div>
-            <div class="input-group mb-3">
+            <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Razón social</span>
                 <asp:TextBox ID="txtRazonSocial" runat="server" CssClass="form-control"></asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+            </div>
+            <div class="input-group mb-3 w-50">
                 <span class="input-group-text">CUIT/CUIL</span>
                 <asp:TextBox ID="txtCUIL" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text">Localidad/Ciudad</span>
-                <asp:TextBox ID="txtLocalidad" runat="server" CssClass="form-control"></asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+
+            <div class="input-group mb-3 w-50">
+                <span class="input-group-text">Direccion</span>
+                <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+            <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Correo electrónico</span>
                 <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Contacto principal</span>
-                <asp:TextBox ID="txtContacto" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                <asp:TextBox ID="txtContacto" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+            <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Teléfono</span>
                 <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
             </div>
         </div>
+
         <div align="center">
             <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary m-3" />
         </div>
 
-        <div class="container my-5">
-            <h4>Listado de proveedores</h4>
-
-
-            <asp:GridView ID="grillaProveedores" runat="server"></asp:GridView>
-
-
-
-        </div>
 
     </form>
 </asp:Content>

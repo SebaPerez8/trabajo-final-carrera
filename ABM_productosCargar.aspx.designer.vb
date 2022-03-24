@@ -23,6 +23,15 @@ Partial Public Class productos
     Protected WithEvents formProductosCargar As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control txtCodigo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtCodigo As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Control txtProducto.
     '''</summary>
     '''<remarks>
@@ -50,13 +59,13 @@ Partial Public Class productos
     Protected WithEvents fuFoto As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
-    '''Control txtCategoria.
+    '''Control dplCategoria.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtCategoria As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents dplCategoria As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control txtFecha.
@@ -75,13 +84,4 @@ Partial Public Class productos
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnCargar As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control grillaProductos.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents grillaProductos As Global.System.Web.UI.WebControls.GridView
 End Class

@@ -18,6 +18,9 @@
     <div class="pb-3">
         <ul class="nav nav-tabs">
             <li class="nav-item">
+                <a class="nav-link" href="ABM_clientesListar.aspx">Listar</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link active">Cargar</a>
             </li>
             <li class="nav-item">
@@ -40,48 +43,33 @@
 
     <form id="formClientesCargar" runat="server">
         <div>
-            <div class="input-group mb-3">
-                <span class="input-group-text">Nombre</span>
+            <div class="input-group mb-3 w-50">
+                <span class="input-group-text" for="txtNombre">Nombre</span>
                 <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+            </div>
+            <div class="input-group mb-3 w-50">
                 <span class="input-group-text">DNI</span>
                 <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Dirección</span>
                 <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                <span class="input-group-text">Correo electrónico</span>
+            </div>
+             <div class="input-group mb-3 w-50">
+                 <span class="input-group-text">Correo electrónico</span>
                 <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Teléfono</span>
                 <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
             </div>
         </div>
+
+
         <div align="center">
             <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary m-3" />
         </div>
 
-        <div class="container my-5">
-            <h4>Listado de clientes</h4>
-
-
-            <asp:GridView ID="grillaClientes" runat="server"></asp:GridView>
-
-
-
-        </div>
 
     </form>
 

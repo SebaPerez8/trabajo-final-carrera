@@ -23,15 +23,6 @@ Partial Public Class ABM_proveedoresModificar
     Protected WithEvents formProveedoresModificar As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control txtRazonSocial.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtRazonSocial As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Control txtCUIL.
     '''</summary>
     '''<remarks>
@@ -41,13 +32,31 @@ Partial Public Class ABM_proveedoresModificar
     Protected WithEvents txtCUIL As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtLocalidad.
+    '''Control btnBuscar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtLocalidad As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control txtRazonSocial.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtRazonSocial As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtDireccion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtDireccion As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control txtCorreo.
