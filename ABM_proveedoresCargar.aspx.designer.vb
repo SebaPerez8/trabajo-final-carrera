@@ -41,13 +41,13 @@ Partial Public Class proveedores
     Protected WithEvents txtCUIL As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtLocalidad.
+    '''Control txtDireccion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtLocalidad As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtDireccion As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control txtCorreo.
@@ -84,13 +84,4 @@ Partial Public Class proveedores
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnCargar As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control grillaProveedores.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents grillaProveedores As Global.System.Web.UI.WebControls.GridView
 End Class

@@ -23,6 +23,24 @@ Partial Public Class ABM_productosModificar
     Protected WithEvents formProductosModificar As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control txtCodigoProducto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtCodigoProducto As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control btnBuscar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control txtProducto.
     '''</summary>
     '''<remarks>
@@ -50,13 +68,13 @@ Partial Public Class ABM_productosModificar
     Protected WithEvents fuFoto As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
-    '''Control txtCategoria.
+    '''Control dplCategoria.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtCategoria As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents dplCategoria As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control txtFecha.

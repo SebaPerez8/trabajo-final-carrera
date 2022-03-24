@@ -23,6 +23,24 @@ Partial Public Class ABM_proveedoresEliminar
     Protected WithEvents formProveedoresEliminar As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control txtCUIL.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtCUIL As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control btnBuscar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control txtRazonSocial.
     '''</summary>
     '''<remarks>
@@ -32,13 +50,40 @@ Partial Public Class ABM_proveedoresEliminar
     Protected WithEvents txtRazonSocial As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtCUIL.
+    '''Control txtDireccion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtCUIL As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtDireccion As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtCorreo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtCorreo As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtContacto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtContacto As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtTelefono.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtTelefono As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control btnEliminar.
