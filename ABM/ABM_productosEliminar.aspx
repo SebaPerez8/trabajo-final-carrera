@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Principal.Master" CodeBehind="ABM_productosCargar.aspx.vb" Inherits="trabajo_final_carrera.productos" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Principal.Master" CodeBehind="ABM_productosEliminar.aspx.vb" Inherits="trabajo_final_carrera.ABM_productosEliminar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -21,10 +21,10 @@
                 <a class="nav-link" href="ABM_productosListar.aspx">Listar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active">Cargar</a>
+                <a class="nav-link" href="ABM_productosCargar.aspx">Cargar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="ABM_productosEliminar.aspx">Eliminar</a>
+                <a class="nav-link active">Eliminar</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="ABM_productosModificar.aspx">Modificar</a>
@@ -40,13 +40,17 @@
         </div>
     </div>
 
-    <form id="formProductosCargar" runat="server">
+    <form id="formProductosEliminar" runat="server">
 
         <div>
-            <div class="input-group mb-3 w-50">
+            <div class="m-0 row justify-content-center">
                 <span class="input-group-text">Codigo de Producto</span>
-                <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtCodigoProducto" runat="server" CssClass="form-control w-50"></asp:TextBox>
             </div>
+            <div align="center" class="mb-5">
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3" />
+            </div>
+
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Producto</span>
                 <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control"></asp:TextBox>
@@ -62,7 +66,7 @@
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Categoria</span>
-                <asp:DropDownList ID="dplCategoria" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="dplCategoria" runat="server" CssClass="form-control"></asp:DropDownList>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Fecha</span>
@@ -70,12 +74,14 @@
             </div>
         </div>
 
-
         <div align="center">
-            <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary m-3" />
+            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3" />
         </div>
 
 
     </form>
+
+
+
 
 </asp:Content>
