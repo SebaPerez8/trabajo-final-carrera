@@ -7,6 +7,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 d-flex justify-content-center">
@@ -25,6 +26,7 @@
             <asp:DropDownList ID="cmbClientes" runat="server" CssClass="form-control"></asp:DropDownList>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
         </div>
+
         <div align="center">
             <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-secondary m-4 pr-5 pl-5" />
         </div>

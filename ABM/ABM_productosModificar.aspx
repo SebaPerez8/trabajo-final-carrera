@@ -64,7 +64,7 @@
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Categoria</span>
-                <asp:DropDownList ID="dplCategoria" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="dplCategoria" runat="server" CssClass="form-control"></asp:DropDownList>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Fecha</span>
