@@ -41,14 +41,33 @@
     <form id="formProductosListar" runat="server">
       
         <div align="center">
-            <asp:Button ID="btnListar" runat="server" Text="Listar" CssClass="btn btn-warning m-5" />
+            <asp:Button ID="btnListar" runat="server" Text="Listar" CssClass="btn btn-warning m-5" Width="112px" />
         </div>
 
         <div class="container my-5">
             <h4>Listado de productos</h4>
 
 
-            <asp:GridView ID="grillaProductos" runat="server"></asp:GridView>
+            <asp:GridView ID="grillaProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="Codigo de Producto" DataSourceID="SqlDataSource1">
+                <Columns>
+                    <asp:BoundField DataField="Codigo de Producto" HeaderText="Codigo de Producto" ReadOnly="True" SortExpression="Codigo de Producto" />
+                    <asp:BoundField DataField="Nombre del Producto" HeaderText="Nombre del Producto" SortExpression="Nombre del Producto" />
+                    <asp:BoundField DataField="Nombre de Categoria" HeaderText="Nombre de Categoria" SortExpression="Nombre de Categoria" />
+                    <asp:BoundField DataField="Precio del Producto" HeaderText="Precio del Producto" SortExpression="Precio del Producto" />
+                    <asp:BoundField DataField="Fecha de Alta" HeaderText="Fecha de Alta" SortExpression="Fecha de Alta" />
+                </Columns>
+            </asp:GridView>
+
+
+
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="Select p.ID_producto as [Codigo de Producto], 
+p.Nombre as [Nombre del Producto],
+c.Nombre as [Nombre de Categoria],
+p.Precio as [Precio del Producto],
+p.FechaAlta as [Fecha de Alta]
+from Productos p
+inner join Categorias c on p.Id_Categoria=c.ID_Categoria
+order by p.Id_Categoria"></asp:SqlDataSource>
 
 
 

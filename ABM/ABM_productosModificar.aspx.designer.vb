@@ -41,6 +41,15 @@ Partial Public Class ABM_productosModificar
     Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Control lblMensajeModificar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblMensajeModificar As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control txtProducto.
     '''</summary>
     '''<remarks>
@@ -50,6 +59,15 @@ Partial Public Class ABM_productosModificar
     Protected WithEvents txtProducto As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control lblNombre.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblNombre As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control txtPrecio.
     '''</summary>
     '''<remarks>
@@ -57,6 +75,15 @@ Partial Public Class ABM_productosModificar
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtPrecio As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblPrecio.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblPrecio As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control fuFoto.
@@ -77,6 +104,15 @@ Partial Public Class ABM_productosModificar
     Protected WithEvents dplCategoria As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
+    '''Control SqlDataSource1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
     '''Control txtFecha.
     '''</summary>
     '''<remarks>
@@ -86,6 +122,15 @@ Partial Public Class ABM_productosModificar
     Protected WithEvents txtFecha As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control lblFechaAlta.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblFechaAlta As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control btnModificar.
     '''</summary>
     '''<remarks>
@@ -93,4 +138,13 @@ Partial Public Class ABM_productosModificar
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnModificar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control lblMensajeFinal.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblMensajeFinal As Global.System.Web.UI.WebControls.Label
 End Class
