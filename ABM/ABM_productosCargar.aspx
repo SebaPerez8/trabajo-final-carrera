@@ -46,14 +46,17 @@
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Codigo de Producto</span>
                 <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control"></asp:TextBox>
+            &nbsp;<asp:Label ID="lblProductos" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Producto</span>
                 <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control"></asp:TextBox>
+            &nbsp;<asp:Label ID="lblNombre" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Precio</span>
                 <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control"></asp:TextBox>
+            &nbsp;<asp:Label ID="lblPrecio" runat="server"></asp:Label>
             </div>
 
             <div class="input-group mb-3 w-50">
@@ -62,17 +65,22 @@
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Categoria</span>
-                <asp:DropDownList ID="dplCategoria" runat="server" CssClass="form-control"></asp:DropDownList>
+                <asp:DropDownList ID="dplCategoria" runat="server" CssClass="form-control" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="ID_Categoria"></asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [Nombre], [ID_Categoria] FROM [Categorias] ORDER BY [Nombre]"></asp:SqlDataSource>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Fecha</span>
                 <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+            &nbsp;<asp:Label ID="lblFecha" runat="server"></asp:Label>
             </div>
         </div>
 
 
         <div align="center">
             <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary m-3" />
+            <br />
+            <br />
+            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </div>
 
 

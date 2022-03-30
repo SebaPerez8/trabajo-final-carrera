@@ -49,15 +49,17 @@
             </div>
             <div align="center" class="mb-5">
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3" />
+                <br />
+                <asp:Label ID="lblMensajeEliminar" runat="server"></asp:Label>
             </div>
 
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Producto</span>
-                <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Precio</span>
-                <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
             </div>
 
             <div class="input-group mb-3 w-50">
@@ -65,17 +67,19 @@
                 <asp:FileUpload ID="fuFoto" runat="server" CssClass="btn-secondary p-1" />
             </div>
             <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Categoria</span>
-                <asp:DropDownList ID="dplCategoria" runat="server" CssClass="form-control"></asp:DropDownList>
-            </div>
+                <span class="input-group-text">Categoria<asp:TextBox ID="txtCategoria" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
+                </span>
+                &nbsp;</div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Fecha</span>
-                <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
             </div>
         </div>
 
         <div align="center">
             <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3" />
+            <br />
+            <asp:Label ID="lblMensajeFinal" runat="server"></asp:Label>
         </div>
 
 

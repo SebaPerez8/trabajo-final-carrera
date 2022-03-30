@@ -32,6 +32,15 @@ Partial Public Class productos
     Protected WithEvents txtCodigo As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control lblProductos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblProductos As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control txtProducto.
     '''</summary>
     '''<remarks>
@@ -41,6 +50,15 @@ Partial Public Class productos
     Protected WithEvents txtProducto As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control lblNombre.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblNombre As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control txtPrecio.
     '''</summary>
     '''<remarks>
@@ -48,6 +66,15 @@ Partial Public Class productos
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtPrecio As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblPrecio.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblPrecio As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control fuFoto.
@@ -68,6 +95,15 @@ Partial Public Class productos
     Protected WithEvents dplCategoria As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
+    '''Control SqlDataSource1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
     '''Control txtFecha.
     '''</summary>
     '''<remarks>
@@ -77,6 +113,15 @@ Partial Public Class productos
     Protected WithEvents txtFecha As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control lblFecha.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblFecha As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control btnCargar.
     '''</summary>
     '''<remarks>
@@ -84,4 +129,13 @@ Partial Public Class productos
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnCargar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control lblMensaje.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblMensaje As Global.System.Web.UI.WebControls.Label
 End Class
