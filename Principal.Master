@@ -90,7 +90,7 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
-                        <a class="collapse-item" href="<%= ResolveClientUrl("administrarOrdenes.aspx") %>">Administrar ordenes</a>
+                        <a class="collapse-item" href="<%= ResolveClientUrl("~/ServicioTecnico/administrarOrdenes.aspx") %>">Administrar ordenes</a>
                         <a class="collapse-item" href="blank.html">Nueva orden</a>
                         <a class="collapse-item" href="blank.html">Pedido de insumos</a>
 
@@ -109,9 +109,9 @@
                     <div class="bg-white py-2 collapse-inner rounded">
 
 
-                        <a class="collapse-item" href="<%= ResolveClientUrl("~/ABM/ABM_clientesCargar.aspx") %>">Clientes</a>
-                        <a class="collapse-item" href="<%= ResolveClientUrl("~/ABM/ABM_proveedoresCargar.aspx") %>">Proveedores</a>
-                        <a class="collapse-item" href="<%= ResolveClientUrl("~/ABM/ABM_productosCargar.aspx") %>">Productos</a>
+                        <a class="collapse-item" href="<%= ResolveClientUrl("~/ABM/Clientes/ABM_clientesCargar.aspx") %>">Clientes</a>
+                        <a class="collapse-item" href="<%= ResolveClientUrl("~/ABM/Proveedores/ABM_proveedoresCargar.aspx") %>">Proveedores</a>
+                        <a class="collapse-item" href="<%= ResolveClientUrl("~/ABM/Productos/ABM_productosCargar.aspx") %>">Productos</a>
 
                     </div>
                 </div>
