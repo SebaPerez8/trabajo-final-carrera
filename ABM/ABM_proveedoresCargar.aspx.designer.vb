@@ -32,6 +32,15 @@ Partial Public Class proveedores
     Protected WithEvents txtRazonSocial As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control lblRazon.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblRazon As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control txtCUIL.
     '''</summary>
     '''<remarks>
@@ -39,6 +48,15 @@ Partial Public Class proveedores
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtCUIL As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblCUIT.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblCUIT As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control txtDireccion.
@@ -50,6 +68,15 @@ Partial Public Class proveedores
     Protected WithEvents txtDireccion As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control lblDireccion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblDireccion As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control txtCorreo.
     '''</summary>
     '''<remarks>
@@ -57,6 +84,33 @@ Partial Public Class proveedores
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtCorreo As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblCorreo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblCorreo As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control txtFecha.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtFecha As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblFecha.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblFecha As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control txtContacto.
@@ -68,6 +122,15 @@ Partial Public Class proveedores
     Protected WithEvents txtContacto As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control lblContacto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblContacto As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control txtTelefono.
     '''</summary>
     '''<remarks>
@@ -77,6 +140,15 @@ Partial Public Class proveedores
     Protected WithEvents txtTelefono As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control lblTelefono.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblTelefono As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control btnCargar.
     '''</summary>
     '''<remarks>
@@ -84,4 +156,13 @@ Partial Public Class proveedores
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnCargar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control lblMensaje.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblMensaje As Global.System.Web.UI.WebControls.Label
 End Class
