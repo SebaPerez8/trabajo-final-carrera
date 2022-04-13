@@ -44,7 +44,7 @@
         <div>
             <div class="m-0 row justify-content-center">
                 <span class="input-group-text">CUIT/CUIL</span>
-                <asp:TextBox ID="txtCUIL" runat="server" CssClass="form-control w-50"></asp:TextBox>
+                <asp:TextBox ID="txtCUIL" runat="server" CssClass="form-control w-50" MaxLength="13"></asp:TextBox>
             </div>
             <div align="center" class="mb-5">
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3" />
@@ -52,27 +52,39 @@
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Razón social</span>
                 <asp:TextBox ID="txtRazonSocial" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:Label ID="lblRazon" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Direccion</span>
                 <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:Label ID="lblDireccion" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Correo electrónico</span>
                 <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
+                <asp:Label ID="lblCorreo" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Contacto principal</span>
                 <asp:TextBox ID="txtContacto" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:Label ID="lblContacto" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Teléfono</span>
                 <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
+                <asp:Label ID="lblTelefono" runat="server"></asp:Label>
+                <br />
+                <br />
+                Nombre Fantasia<asp:TextBox ID="txtNombreFantasia" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
+                <asp:Label ID="lblNombreFantasia" runat="server"></asp:Label>
+                <br />
             </div>
         </div>
 
         <div align="center">
             <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-success m-3" />
+            <br />
+            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </div>
 
     </form>

@@ -149,6 +149,24 @@ Partial Public Class proveedores
     Protected WithEvents lblTelefono As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control txtNombreFantasia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtNombreFantasia As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblNombreFantasia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblNombreFantasia As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control btnCargar.
     '''</summary>
     '''<remarks>

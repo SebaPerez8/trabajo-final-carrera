@@ -3,6 +3,7 @@
     Dim Proveedores As New Clase_Proveedores
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         LimpiarMensajes()
+
     End Sub
 
     'faltaria poner limpiar labeeeles
@@ -20,30 +21,30 @@
                 ResultadoMensaje = MsgBox("Existen campos incompletos, ¿Desea Continuar?", MsgBoxStyle.YesNo, "AVISO")
                 If ResultadoMensaje = 1 OrElse ResultadoMensaje = 6 Then
                     Proveedores.CUIT = Val(txtCUIL.Text)
-                    Proveedores.RazonSocial = Val(txtRazonSocial.Text)
+                    Proveedores.RazonSocial = txtRazonSocial.Text
                     Proveedores.Telefono = Val(txtTelefono.Text)
                     Proveedores.Mail = txtCorreo.Text
                     Proveedores.Direccion = txtDireccion.Text
                     Proveedores.FechaAlta = txtFecha.Text
-                    'Proveedores.NombreFantasia= txtNombreFantasia.text
-                    ' Proveedores.ContactoPrincipal=txtContacto.Text
+                    Proveedores.NombreFantasia = txtNombreFantasia.Text
+                    Proveedores.ContactoPrinciapl = txtContacto.Text
 
                     Try
                         If Not Proveedores.ControlExistencia(Val(txtCUIL.Text)) Then
                             Proveedores.Grabar()
                             MsgBox("Se grabo con exito el Proveedor")
-                            'lblMensaje.Text = "Se grabo con exito el Proveedor"
+
                             LimpiarFromProducto()
                         Else
-                           ' lblMensaje.Text = "Ya existe un Proveedor con esa Razon Social"
-                            MsgBox("Ya existe un Proveedor con esa Razon Social")
+
+                            MsgBox("Ya existe un Proveedor con esa CUIT")
                             txtRazonSocial.Focus()
                         End If
 
 
                     Catch ex As Exception
                         MsgBox("Hubo un problema, No se pudo grabar el Proveedor")
-                        'lblMensaje.Text = "Hubo un problema, No se pudo grabar el Proveedor"
+
 
                     End Try
                 Else
@@ -52,29 +53,28 @@
                 End If
             Else
                 Proveedores.CUIT = Val(txtCUIL.Text)
-                Proveedores.RazonSocial = Val(txtRazonSocial.Text)
+                Proveedores.RazonSocial = txtRazonSocial.Text
                 Proveedores.Telefono = Val(txtTelefono.Text)
                 Proveedores.Mail = txtCorreo.Text
                 Proveedores.Direccion = txtDireccion.Text
                 Proveedores.FechaAlta = txtFecha.Text
-                Proveedores.NombreFantasia = txtNombreFantasia.text
-                Proveedores.ContactoPrincipal = txtContacto.Text
+                Proveedores.NombreFantasia = txtNombreFantasia.Text
+                Proveedores.ContactoPrinciapl = txtContacto.Text
 
                 Try
                     If Not Proveedores.ControlExistencia(Val(txtCUIL.Text)) Then
                         Proveedores.Grabar()
-                        MsgBox("Se grabo con exito el Proveedor")
-                        'lblMensaje.Text = "Se grabo con exito el Proveedor"
+                        MsgBox("Se grabo con exito el Proveedor", MsgBoxStyle.Exclamation, "AVISO")
+
                         LimpiarFromProducto()
                     Else
-                         ' lblMensaje.Text = "Ya existe un Proveedor con esa Razon Social"
-                            MsgBox("Ya existe un Proveedor con esa Razon Social")
+
+                        MsgBox("Ya existe un Proveedor con ese CUIT", MsgBoxStyle.Exclamation, "AVISO")
                     End If
 
 
                 Catch ex As Exception
-                    MsgBox("Hubo un problema, No se pudo grabar el Proveedor")
-                    'lblMensaje.Text = "Hubo un problema, No se pudo grabar el Proveedor"
+                    MsgBox("Hubo un problema, No se pudo grabar el Proveedor", MsgBoxStyle.Information, "AVISO")
 
                 End Try
 
@@ -94,7 +94,7 @@
         txtTelefono.Text = ""
         txtDireccion.Text = ""
         txtContacto.text = ""
-        txtNombreFantasia = ""
+        txtNombreFantasia.text = ""
     End Sub
 
     Public Function ControldeBlancosObligatorios(todoOK As Boolean) As Boolean
@@ -114,31 +114,28 @@
 
     Public Function ControldeBlancos(todoOK As Boolean) As Boolean
 
-        If txtFecha.Text = "" OrElse IsDBNull(txtFecha) Then
+        If txtFecha.Text = "" OrElse IsDBNull(txtFecha) OrElse txtFecha.Text = " " Then
             todoOK = True
 
         End If
-        If txtCorreo.Text = "" OrElse IsDBNull(txtCorreo) Then
+        If txtCorreo.Text = "" OrElse IsDBNull(txtCorreo) OrElse txtCorreo.Text = " " Then
             todoOK = True
 
         End If
-        If txtCorreo.Text = "" OrElse IsDBNull(txtCorreo) Then
+
+        If txtTelefono.Text = "" OrElse IsDBNull(txtTelefono) OrElse txtTelefono.Text = " " Then
             todoOK = True
 
         End If
-        If txtTelefono.Text = "" OrElse IsDBNull(txtTelefono) Then
+        If txtDireccion.Text = "" OrElse IsDBNull(txtDireccion) OrElse txtDireccion.Text = " " Then
             todoOK = True
 
         End If
-        If txtDireccion.Text = "" OrElse IsDBNull(txtDireccion) Then
+        If txtContacto.Text = "" OrElse IsDBNull(txtContacto) OrElse txtContacto.Text = " " Then
             todoOK = True
 
         End If
-        If txtContacto.Text = "" OrElse IsDBNull(txtContacto) Then
-            todoOK = True
-
-        End If
-          If txtNombreFantasia.Text = "" OrElse IsDBNull(txtNombreFantasia) Then
+        If txtNombreFantasia.Text = "" OrElse IsDBNull(txtNombreFantasia) OrElse txtNombreFantasia.Text = " " Then
             todoOK = True
 
         End If
@@ -146,24 +143,24 @@
     End Function
 
     Public Sub AvisoBlancos()
-        If txtFecha.Text = "" OrElse IsDBNull(txtFecha) Then
+        If txtFecha.Text = "" OrElse IsDBNull(txtFecha) OrElse txtFecha.Text = " " Then
 
             lblFecha.Text = "Este campo esta Incompleto"
         End If
-        If txtCorreo.Text = "" OrElse IsDBNull(txtCorreo) Then
+        If txtCorreo.Text = "" OrElse IsDBNull(txtCorreo) OrElse txtCorreo.Text = " " Then
 
             lblCorreo.Text = "Este campo esta Incompleto"
         End If
 
-        If txtTelefono.Text = "" OrElse IsDBNull(txtTelefono) Then
+        If txtTelefono.Text = "" OrElse IsDBNull(txtTelefono) OrElse txtTelefono.Text = " " Then
 
             lblTelefono.Text = "Este campo esta Incompleto"
         End If
-        If txtDireccion.Text = "" OrElse IsDBNull(txtDireccion) Then
+        If txtDireccion.Text = "" OrElse IsDBNull(txtDireccion) OrElse txtDireccion.Text = " " Then
 
             lblDireccion.Text = "Este campo esta Incompleto"
         End If
-        If txtContacto.Text = "" OrElse IsDBNull(txtContacto) Then
+        If txtContacto.Text = "" OrElse IsDBNull(txtContacto) OrElse txtContacto.Text = " " Then
 
             lblContacto.Text = "Este campo esta Incompleto"
         End If

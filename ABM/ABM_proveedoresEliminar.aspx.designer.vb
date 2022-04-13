@@ -17,7 +17,7 @@ Partial Public Class ABM_proveedoresEliminar
     '''Control formProveedoresEliminar.
     '''</summary>
     '''<remarks>
-    '''Campo generado automáticamente.
+    '''Campo generado automáticamente.fgfg
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents formProveedoresEliminar As Global.System.Web.UI.HtmlControls.HtmlForm

@@ -50,7 +50,7 @@
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">CUIT/CUIL</span>
-                <asp:TextBox ID="txtCUIL" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtCUIL" runat="server" CssClass="form-control" MaxLength="13"></asp:TextBox>
                 <asp:Label ID="lblCUIT" runat="server"></asp:Label>
             </div>
 
@@ -76,7 +76,7 @@
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Teléfono</span>
-                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
+                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone" MaxLength="13"></asp:TextBox>
                 <asp:Label ID="lblTelefono" runat="server"></asp:Label>
                 <br />
                 <br />
