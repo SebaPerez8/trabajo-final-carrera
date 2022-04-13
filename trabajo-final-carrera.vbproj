@@ -1783,6 +1783,7 @@
     <Content Include="Tema\vendor\jquery\jquery.min.js" />
     <Content Include="Tema\vendor\jquery\jquery.slim.js" />
     <Content Include="Tema\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Ventas\Ventas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1904,6 +1905,13 @@
     </Compile>
     <Compile Include="ABM\Proveedores\ABM_proveedoresCargar.aspx.vb">
       <DependentUpon>ABM_proveedoresCargar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\Ventas.aspx.designer.vb">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Ventas.aspx.vb">
+      <DependentUpon>Ventas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

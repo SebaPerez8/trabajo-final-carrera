@@ -66,7 +66,7 @@
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Categoria</span>
                 <asp:DropDownList ID="dplCategoria" runat="server" CssClass="form-control" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="ID_Categoria"></asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [Nombre], [ID_Categoria] FROM [Categorias] ORDER BY [Nombre]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [ID_Categoria], [Nombre] FROM [Categorias] ORDER BY [Nombre]"></asp:SqlDataSource>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Fecha</span>
