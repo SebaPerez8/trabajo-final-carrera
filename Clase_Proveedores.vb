@@ -13,28 +13,29 @@ Public Class Clase_Proveedores
 
 
 #Region "Propiedades"
-    Private _RazonSocial As Integer
-    Private _CUIT As String
+    Private _RazonSocial As String
+    Private _CUIT As Int64
     Private _Direccion As String
-    Private _Telefono As Integer
+    Private _Telefono As Int64
+    Private _ContactoPrincipal As String
     Private _Mail As String
     Private _FechaAlta As Date
     Private _NombreFantasia As String
 
-    Public Property RazonSocial() As Integer
-        Get
-            Return _RazonSocial
-        End Get
-        Set(ByVal Value As Integer)
-            _RazonSocial = Value
-        End Set
-    End Property
-    Public Property CUIT() As String
+    Public Property CUIT() As Int64
         Get
             Return _CUIT
         End Get
-        Set(ByVal Value As String)
+        Set(ByVal Value As Int64)
             _CUIT = Value
+        End Set
+    End Property
+    Public Property RazonSocial() As String
+        Get
+            Return _RazonSocial
+        End Get
+        Set(ByVal Value As String)
+            _RazonSocial = Value
         End Set
     End Property
     Public Property NombreFantasia() As String
@@ -53,12 +54,20 @@ Public Class Clase_Proveedores
             _Direccion = Value
         End Set
     End Property
-    Public Property Telefono() As Integer
+    Public Property Telefono() As Int64
         Get
             Return _Telefono
         End Get
-        Set(ByVal Value As Integer)
+        Set(ByVal Value As Int64)
             _Telefono = Value
+        End Set
+    End Property
+    Public Property ContactoPrincipal() As String
+        Get
+            Return _ContactoPrincipal
+        End Get
+        Set(ByVal Value As String)
+            _ContactoPrincipal = Value
         End Set
     End Property
     Public Property Mail() As String
@@ -85,10 +94,11 @@ Public Class Clase_Proveedores
         CONECTOR.Open()
         COMANDO.Connection = CONECTOR
         COMANDO.CommandType = CommandType.Text
+
         Try
 
-
-            SQL = "INSERT INTO Proveedores (Razon_Social,CUIT-CUIL,Direccion,Telefono,Mail,FechaAlta,Nombre_Fantasia) VALUES ( @Razon_Social,@CUIT, @Direccion,@Telefono,@Mail ,@FechaAlta,@Nombre_Fantasia )"
+            '                                     (Razon_Social,CUIT-CUIL,Direccion,Telefono,Mail,FechaAlta,Nombre_Fantasia)
+            SQL = "INSERT INTO Proveedores VALUES (@Razon_Social,@CUIT,IsNull(@Direccion,''),IsNull(@Telefono,0),IsNull(@Mail,''),ISNULL(@FechaAlta,GETDATE()),ISNULL(@Nombre_Fantasia,''),ISNULL(@Contacto_Principal,''))"
             COMANDO.CommandText = SQL
             COMANDO.Parameters.Clear()
 
@@ -100,6 +110,7 @@ Public Class Clase_Proveedores
             COMANDO.Parameters.AddWithValue("@Mail", _Mail)
             COMANDO.Parameters.AddWithValue("@FechaAlta", _FechaAlta)
             COMANDO.Parameters.AddWithValue("@Nombre_Fantasia", _NombreFantasia)
+            COMANDO.Parameters.AddWithValue("@Contacto_Principal", _ContactoPrincipal)
             COMANDO.ExecuteNonQuery()
 
         Catch ex As Exception
@@ -119,7 +130,7 @@ Public Class Clase_Proveedores
 
         Try
 
-            SQL = "Select * from Proveedores where CUIT-CUIL= @CUIT"
+            SQL = "Select * from Proveedores where CUIT=@CUIT"
             COMANDO.CommandText = SQL
             COMANDO.Parameters.Clear()
             COMANDO.Parameters.AddWithValue("@CUIT", CUIT)
@@ -149,7 +160,7 @@ Public Class Clase_Proveedores
         COMANDO.CommandType = CommandType.Text
         Try
 
-            SQL = "UPDATE Proveedores  SET  Direccion=@Direccion, Telefono=@Telefono, Mail=@Mail,Nombre_Fantasia=@Nombre_Fantasia,Razon_Social=@Razon where CUIT-CUIL=@CUIT"
+            SQL = "UPDATE Proveedores  SET  Direccion=@Direccion, Telefono=@Telefono, Mail=@Mail,Nombre_Fantasia=@Nombre_Fantasia,Razon_Social=@Razon,Contacto_Principal=@Contacto  where CUIT=@CUIT"
             COMANDO.CommandText = SQL
             COMANDO.Parameters.Clear()
 
@@ -159,6 +170,7 @@ Public Class Clase_Proveedores
             COMANDO.Parameters.AddWithValue("@Telefono", _Telefono)
             COMANDO.Parameters.AddWithValue("@Mail", _Mail)
             COMANDO.Parameters.AddWithValue("@Razon", _RazonSocial)
+            COMANDO.Parameters.AddWithValue("@Contacto", _ContactoPrincipal)
             COMANDO.Parameters.AddWithValue("@CUIT", _CUIT)
 
 
@@ -181,7 +193,7 @@ Public Class Clase_Proveedores
 
         Try
 
-            SQL = "Select * from Proveedores where CUIT-CUIL=@CUIT"
+            SQL = "Select * from Proveedores where CUIT=@CUIT"
             COMANDO.CommandText = SQL
             COMANDO.Parameters.Clear()
             COMANDO.Parameters.AddWithValue("@CUIT", CUIT)
@@ -192,12 +204,13 @@ Public Class Clase_Proveedores
             If DR.HasRows = True Then
                 encontro = True
                 DR.Read()
-                _NombreFantasia = DR("Nombre_Fantasia")
-                _Mail = DR("Mail")
-                _Telefono = DR("Telefono")
-                _FechaAlta = DR("FechaAlta")
-                _Direccion = DR("Direccion")
-                _RazonSocial = DR("Razon_Social")
+                If (IsDBNull(DR("Nombre_Fantasia"))) Then _ContactoPrincipal = "" Else _NombreFantasia = DR("Nombre_Fantasia")
+                If (IsDBNull(DR("Mail"))) Then _Mail = "" Else _Mail = DR("Mail")
+                If (IsDBNull(DR("Telefono"))) Then _Telefono = "" Else _Telefono = DR("Telefono")
+                If (IsDBNull(DR("FechaAlta"))) Then _FechaAlta = "" Else _FechaAlta = DR("FechaAlta")
+                If (IsDBNull(DR("Direccion"))) Then _Direccion = "" Else _Direccion = DR("Direccion")
+                If (IsDBNull(DR("Razon_Social"))) Then _RazonSocial = "" Else _RazonSocial = DR("Razon_Social")
+                If (IsDBNull(DR("Contacto_Principal"))) Then _ContactoPrincipal = "" Else _ContactoPrincipal = DR("Contacto_Principal")
 
             End If
             DR.Close()
@@ -215,7 +228,7 @@ Public Class Clase_Proveedores
         COMANDO.CommandType = CommandType.Text
         Try
 
-            SQL = "Delete from Proveedores where CUIT-CUIL=@CUIT"
+            SQL = "Delete from Proveedores where CUIT=@CUIT"
             COMANDO.CommandText = SQL
             COMANDO.Parameters.Clear()
 

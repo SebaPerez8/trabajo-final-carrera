@@ -39,39 +39,60 @@
             </div>
         </div>
     </div>
+    <br />
+    <br />
 
     <form id="formProveedoresCargar" runat="server">
 
-        <div>
+        
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Razón social</span>
                 <asp:TextBox ID="txtRazonSocial" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:Label ID="lblRazon" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">CUIT/CUIL</span>
-                <asp:TextBox ID="txtCUIL" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtCUIL" runat="server" CssClass="form-control" MaxLength="13"></asp:TextBox>
+                <asp:Label ID="lblCUIT" runat="server"></asp:Label>
             </div>
 
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Direccion</span>
                 <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:Label ID="lblDireccion" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Correo electrónico</span>
                 <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
+                <asp:Label ID="lblCorreo" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Contacto principal</span>
+                <span class="input-group-text">Fecha de alta</span>
+                <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                <asp:Label ID="lblFecha" runat="server"></asp:Label>
+            </div>
+            <div class="input-group mb-3 w-50">
+                <span class="input-group-text">Contacto Principal</span>
                 <asp:TextBox ID="txtContacto" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:Label ID="lblContacto" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Teléfono</span>
-                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
+                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone" MaxLength="13"></asp:TextBox>
+                <asp:Label ID="lblTelefono" runat="server"></asp:Label>
             </div>
-        </div>
+            <div class="input-group mb-3 w-50">
+                <span class="input-group-text">Nombre Fantasia</span>
+                <asp:TextBox ID="txtNombreFantasia" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
+                <asp:Label ID="lblNombreFantasia" runat="server"></asp:Label>
+            </div>
+        
 
         <div align="center">
             <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary m-3" />
+            <br />
+            <br />
+            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </div>
 
 

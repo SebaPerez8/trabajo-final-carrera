@@ -50,7 +50,21 @@
             <h4>Listado de proveedores</h4>
 
 
-            <asp:GridView ID="grillaProveedores" runat="server"></asp:GridView>
+            <asp:GridView ID="grillaProveedores" runat="server" AutoGenerateColumns="False" DataKeyNames="Razon Social,CUIT/CUIL" DataSourceID="SqlDataSource1">
+                <Columns>
+                    <asp:BoundField DataField="Razon Social" HeaderText="Razon Social" ReadOnly="True" SortExpression="Razon Social" />
+                    <asp:BoundField DataField="CUIT/CUIL" HeaderText="CUIT/CUIL" ReadOnly="True" SortExpression="CUIT/CUIL" />
+                    <asp:BoundField DataField="Nombre Fantasia" HeaderText="Nombre Fantasia" SortExpression="Nombre Fantasia" />
+                    <asp:BoundField DataField="Direccion de la Empresa" HeaderText="Direccion de la Empresa" SortExpression="Direccion de la Empresa" />
+                    <asp:BoundField DataField="Contacto" HeaderText="Contacto" SortExpression="Contacto" />
+                    <asp:BoundField DataField="Correo Electronico" HeaderText="Correo Electronico" SortExpression="Correo Electronico" />
+                    <asp:BoundField DataField="Fecha Alta" HeaderText="Fecha Alta" SortExpression="Fecha Alta" />
+                </Columns>
+            </asp:GridView>
+
+
+
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="select p.Razon_Social as [Razon Social], p.CUIT as [CUIT/CUIL],p.Nombre_Fantasia as [Nombre Fantasia],p.Direccion as [Direccion de la Empresa], p.Telefono as [Contacto],p.Mail as [Correo Electronico],p.FechaAlta as [Fecha Alta] from Proveedores p order by FechaAlta"></asp:SqlDataSource>
 
 
 
