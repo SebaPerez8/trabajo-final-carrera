@@ -74,6 +74,8 @@
 
         <div align="center">
             <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3" />
+            <br />
+            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </div>
 
     </form>

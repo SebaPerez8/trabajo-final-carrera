@@ -1863,6 +1863,9 @@
       <DependentUpon>ABM_clientesCargar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Clase_Clientes.vb" />
+    <Compile Include="Clase_Productos.vb" />
+    <Compile Include="Clase_Proveedores.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -50,7 +50,6 @@
             <div align="center" class="mb-5">
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3" />
                 <br />
-                <asp:Label ID="lblMensajeEliminar" runat="server"></asp:Label>
             </div>
 
             <div class="input-group mb-3 w-50">
@@ -62,10 +61,6 @@
                 <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
             </div>
 
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Foto</span>
-                <asp:FileUpload ID="fuFoto" runat="server" CssClass="btn-secondary p-1" />
-            </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Categoria<asp:TextBox ID="txtCategoria" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
                 </span>
@@ -79,7 +74,7 @@
         <div align="center">
             <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3" />
             <br />
-            <asp:Label ID="lblMensajeFinal" runat="server"></asp:Label>
+            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </div>
 
 

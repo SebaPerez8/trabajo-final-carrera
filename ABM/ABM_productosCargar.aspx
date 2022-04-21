@@ -62,6 +62,7 @@
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Foto</span>
                 <asp:FileUpload ID="fuFoto" runat="server" CssClass="btn-secondary p-1" />
+                <asp:Label ID="lblfoto" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Categoria</span>
@@ -70,7 +71,7 @@
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Fecha</span>
-                <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date" Text="44/34/2022"></asp:TextBox>
             &nbsp;<asp:Label ID="lblFecha" runat="server"></asp:Label>
             </div>
         </div>

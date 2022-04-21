@@ -46,28 +46,36 @@
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text" for="txtNombre">Nombre</span>
                 <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:Label ID="lblNombre" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">DNI</span>
                 <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:Label ID="lblDNI" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Dirección</span>
                 <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:Label ID="lblDireccion" runat="server"></asp:Label>
             </div>
              <div class="input-group mb-3 w-50">
                  <span class="input-group-text">Correo electrónico</span>
                 <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
+                 <asp:Label ID="lblCorreo" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Teléfono</span>
                 <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
+                <asp:Label ID="lblTelefono" runat="server"></asp:Label>
+                <br />
             </div>
         </div>
 
 
         <div align="center">
             <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary m-3" />
+            <br />
+                <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </div>
 
 

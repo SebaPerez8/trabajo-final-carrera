@@ -73,7 +73,7 @@ Public Class Clase_Productos
         Try
 
 
-            SQL = "INSERT INTO Productos (ID_producto,Nombre,Id_Categoria,Precio,FechaAlta) VALUES ( @ID_producto,@Nombre, @Id_Categoria , @Precio ,@FechaAlta )"
+            SQL = "INSERT INTO Productos (ID_producto,Nombre,Id_Categoria,Precio,FechaAlta) VALUES ( @ID_producto,@Nombre, IsNull(@Id_Categoria,1) , isNull(@Precio,0) ,ISNULL(@FechaAlta,GETDATE()) )"
             COMANDO.CommandText = SQL
             COMANDO.Parameters.Clear()
 
@@ -129,7 +129,7 @@ Public Class Clase_Productos
         COMANDO.CommandType = CommandType.Text
         Try
 
-            SQL = "UPDATE Productos  SET  Nombre=@Nombre, Precio=@Precio , Id_Categoria=@Id_Categoria where ID_producto= @CodPro "
+            SQL = "UPDATE Productos  SET  Nombre=@Nombre, Precio=@Precio , Id_Categoria=@Id_Categoria,FechaAlta=@FechaAlta where ID_producto= @CodPro "
             COMANDO.CommandText = SQL
             COMANDO.Parameters.Clear()
 
@@ -138,7 +138,7 @@ Public Class Clase_Productos
             COMANDO.Parameters.AddWithValue("@Id_Categoria", _id_Categoria)
             COMANDO.Parameters.AddWithValue("@Precio", _Precio)
             COMANDO.Parameters.AddWithValue("@CodPro", _ID_Producto)
-
+            COMANDO.Parameters.AddWithValue("@FechaAlta", _FechaAlta)
             COMANDO.ExecuteNonQuery()
 
         Catch ex As Exception
@@ -165,11 +165,10 @@ Public Class Clase_Productos
             If DR.HasRows = True Then
                 encontro = True
                 DR.Read()
-                _Nombre = DR("Nombre")
-                _id_Categoria = DR("Id_Categoria")
-                _Precio = DR("Precio")
-                _FechaAlta = DR("FechaAlta")
-
+                If (IsDBNull(DR("Nombre"))) Then _Nombre = "" Else _Nombre = DR("Nombre")
+                If (IsDBNull(DR("Id_Categoria"))) Then _id_Categoria = "" Else _id_Categoria = DR("Id_Categoria")
+                If (IsDBNull(DR("Precio"))) Then _Precio = "" Else _Precio = DR("Precio")
+                If (IsDBNull(DR("FechaAlta"))) Then _FechaAlta = "" Else _FechaAlta = DR("FechaAlta")
 
             End If
             DR.Close()
@@ -182,19 +181,19 @@ Public Class Clase_Productos
     End Function
 
 
-    Public Sub Eliminar()
+    Public Sub Eliminar(Codigo As Integer)
         CONECTOR.Open()
         COMANDO.Connection = CONECTOR
         COMANDO.CommandType = CommandType.Text
         Try
 
-            SQL = "Delete from Productos where ID_producto= @CodPro "
+            SQL = "Delete from Productos where ID_producto=@CodPro"
             COMANDO.CommandText = SQL
             COMANDO.Parameters.Clear()
 
 
 
-            COMANDO.Parameters.AddWithValue("@CodPro", _ID_Producto)
+            COMANDO.Parameters.AddWithValue("@CodPro", Codigo)
 
             COMANDO.ExecuteNonQuery()
 
@@ -204,5 +203,7 @@ Public Class Clase_Productos
 
         CONECTOR.Close()
     End Sub
+
+
 #End Region
 End Class
