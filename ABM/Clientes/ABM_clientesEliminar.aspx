@@ -48,32 +48,34 @@
         <div>
             <div class="m-0 row justify-content-center">
                 <span class="input-group-text">DNI</span>
-                <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control w-50"></asp:TextBox>
+                <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control w-50" placeholder="17749563"></asp:TextBox>
             </div>
             <div align="center" class="mb-5">
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3" />
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text" for="txtNombre">Nombre</span>
-                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Dirección</span>
-                <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Correo electrónico</span>
-                <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
+                <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email" ReadOnly="True"></asp:TextBox>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Teléfono</span>
-                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
+                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone" ReadOnly="True"></asp:TextBox>
             </div>
         </div>
 
 
         <div align="center">
             <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3" />
+             <br />
+            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </div>
 
     </form>

@@ -43,28 +43,28 @@
          <div>
             <div class="m-0 row justify-content-center">
                 <span class="input-group-text">Codigo de Producto</span>
-                <asp:TextBox ID="txtCodigoProducto" runat="server" CssClass="form-control w-50"></asp:TextBox>
+                <asp:TextBox ID="txtCodigoProducto" runat="server" CssClass="form-control w-50" placeholder="0000000001"></asp:TextBox>
             </div>
             <div align="center" class="mb-5">
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3" />
                 <br />
-                <asp:Label ID="lblMensajeModificar" runat="server"></asp:Label>
             </div>
 
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Producto</span>
-                <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control"></asp:TextBox>
-                <asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label>
+                <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control" placeholder="Memoria USB Kingston 16GB"></asp:TextBox>
+                <asp:Label ID="lblNombre" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Precio</span>
-                <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control"></asp:TextBox>
-                <asp:Label ID="lblPrecio" runat="server" Text="Label"></asp:Label>
+                <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" placeholder="1500"></asp:TextBox>
+                <asp:Label ID="lblPrecio" runat="server"></asp:Label>
             </div>
 
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Foto</span>
                 <asp:FileUpload ID="fuFoto" runat="server" CssClass="btn-secondary p-1" />
+                <asp:Label ID="lblfoto" runat="server"></asp:Label>
             </div>
             <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Categoria</span>
@@ -81,7 +81,7 @@
         <div align="center">
             <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-success m-3" />
             <br />
-            <asp:Label ID="lblMensajeFinal" runat="server"></asp:Label>
+            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </div>
 
 

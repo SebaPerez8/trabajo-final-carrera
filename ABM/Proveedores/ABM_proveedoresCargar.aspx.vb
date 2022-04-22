@@ -25,6 +25,10 @@
                     Proveedores.Telefono = Val(txtTelefono.Text)
                     Proveedores.Mail = txtCorreo.Text
                     Proveedores.Direccion = txtDireccion.Text
+                    If txtFecha.Text = "" Then
+                        Proveedores.FechaAlta = DateTime.Now().ToShortDateString
+                        txtFecha.Text = Proveedores.FechaAlta
+                    End If
                     Proveedores.FechaAlta = txtFecha.Text
                     Proveedores.NombreFantasia = txtNombreFantasia.Text
                     Proveedores.ContactoPrincipal = txtContacto.Text
@@ -32,18 +36,18 @@
                     Try
                         If Not Proveedores.ControlExistencia(Val(txtCUIL.Text)) Then
                             Proveedores.Grabar()
-                            MsgBox("Se grabo con exito el Proveedor")
+                            MsgBox("Se grabo con exito el Proveedor", MsgBoxStyle.Information, "AVISO")
 
                             LimpiarFromProducto()
                         Else
 
-                            MsgBox("Ya existe un Proveedor con esa CUIT")
+                            MsgBox("Ya existe un Proveedor con esa CUIT", MsgBoxStyle.Exclamation, "AVISO")
                             txtRazonSocial.Focus()
                         End If
 
 
                     Catch ex As Exception
-                        MsgBox("Hubo un problema, No se pudo grabar el Proveedor")
+                        MsgBox("Hubo un problema, No se pudo grabar el Proveedor", MsgBoxStyle.Exclamation, "AVISO")
 
 
                     End Try
@@ -57,6 +61,10 @@
                 Proveedores.Telefono = Val(txtTelefono.Text)
                 Proveedores.Mail = txtCorreo.Text
                 Proveedores.Direccion = txtDireccion.Text
+                If txtFecha.Text = "" Then
+                    Proveedores.FechaAlta = DateTime.Now().ToShortDateString
+                    txtFecha.Text = Proveedores.FechaAlta
+                End If
                 Proveedores.FechaAlta = txtFecha.Text
                 Proveedores.NombreFantasia = txtNombreFantasia.Text
                 Proveedores.ContactoPrincipal = txtContacto.Text
@@ -64,7 +72,7 @@
                 Try
                     If Not Proveedores.ControlExistencia(Val(txtCUIL.Text)) Then
                         Proveedores.Grabar()
-                        MsgBox("Se grabo con exito el Proveedor", MsgBoxStyle.Exclamation, "AVISO")
+                        MsgBox("Se grabo con exito el Proveedor", MsgBoxStyle.Information, "AVISO")
 
                         LimpiarFromProducto()
                     Else
@@ -74,7 +82,7 @@
 
 
                 Catch ex As Exception
-                    MsgBox("Hubo un problema, No se pudo grabar el Proveedor", MsgBoxStyle.Information, "AVISO")
+                    MsgBox("Hubo un problema, No se pudo grabar el Proveedor", MsgBoxStyle.Exclamation, "AVISO")
 
                 End Try
 
@@ -106,7 +114,7 @@
         End If
         If txtRazonSocial.Text = "" OrElse IsDBNull(txtRazonSocial) Then
             todoOK = False
-            lblRazon.Text = "Debe completar este campo"
+            txtRazonSocial.CssClass = txtRazonSocial.CssClass + " is-invalid"
         End If
 
         Return todoOK

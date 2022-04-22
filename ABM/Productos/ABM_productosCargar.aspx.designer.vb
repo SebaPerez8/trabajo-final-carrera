@@ -86,6 +86,15 @@ Partial Public Class productos
     Protected WithEvents fuFoto As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
+    '''Control lblfoto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblfoto As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control dplCategoria.
     '''</summary>
     '''<remarks>

@@ -25,17 +25,17 @@
 
                 Else
 
-                    MsgBox("Ese Proveedor no existe ", MsgBoxStyle.Information, "AVISO")
+                    MsgBox("Ese Proveedor no existe ", MsgBoxStyle.Exclamation, "AVISO")
                     txtCUIL.Text = ""
                     txtCUIL.Focus()
                 End If
             Else
-                MsgBox("Es necesario completar el campo de CUIT/CUIL", MsgBoxStyle.Information, "AVISO")
+                MsgBox("Es necesario completar el campo de CUIT/CUIL", MsgBoxStyle.Exclamation, "AVISO")
 
             End If
 
         Catch ex As Exception
-            MsgBox("Hubo un problema, No se pudo Buscar el Proveedor", MsgBoxStyle.Information, "AVISO")
+            MsgBox("Hubo un problema, No se pudo Buscar el Proveedor", MsgBoxStyle.Exclamation, "AVISO")
 
 
         End Try
