@@ -42,55 +42,60 @@
     <br />
     <br />
 
-    <form id="formProveedoresCargar" runat="server">
+    <form id="formProveedoresCargar" runat="server" class="row g-3">
 
 
-        <div class="input-group mb-3 w-50">
-            <span class="input-group-text">Razón social</span>
-            <asp:TextBox ID="txtRazonSocial" runat="server" CssClass="form-control" ></asp:TextBox>
+        <div class="col-md-4 position-relative m-1">
+            <label for="txtRazonSocial" class="form-label">Razón Social</label>
+            <asp:TextBox ID="txtRazonSocial" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label ID="lblRazon" runat="server" ForeColor="#CC0000"></asp:Label>
         </div>
 
-        <div class="input-group mb-3 w-50">
-            <span class="input-group-text">CUIT/CUIL</span>
+        <div class="col-md-3 position-relative m-1">
+            <label for="txtCUIL" class="form-label">CUIT/CUIL</label>
             <asp:TextBox ID="txtCUIL" runat="server" CssClass="form-control" MaxLength="13"></asp:TextBox>
             <asp:Label ID="lblCUIT" runat="server"></asp:Label>
         </div>
 
-        <div class="input-group mb-3 w-50">
-            <span class="input-group-text">Direccion</span>
+        <div class="col-md-4 position-relative m-1">
+            <label for="txtDireccion" class="form-label">Dirección</label>
             <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label ID="lblDireccion" runat="server"></asp:Label>
         </div>
-        <div class="input-group mb-3 w-50">
-            <span class="input-group-text">Correo electrónico</span>
+        
+        <div class="col-md-4 position-relative m-1">
+            <label for="txtCorreo" class="form-label">Correo electrónico</label>
             <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
             <asp:Label ID="lblCorreo" runat="server"></asp:Label>
         </div>
-        <div class="input-group mb-3 w-50">
-            <span class="input-group-text">Fecha de alta</span>
+
+        <div class="col-md-3 position-relative m-1">
+            <label for="txtFecha" class="form-label">Fecha de alta</label>
             <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
             <asp:Label ID="lblFecha" runat="server"></asp:Label>
         </div>
-        <div class="input-group mb-3 w-50">
-            <span class="input-group-text">Contacto Principal</span>
+
+        <div class="col-md-4 position-relative m-1">
+            <label for="txtContacto" class="form-label">Contacto Principal</label>
             <asp:TextBox ID="txtContacto" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label ID="lblContacto" runat="server"></asp:Label>
         </div>
-        <div class="input-group mb-3 w-50">
-            <span class="input-group-text">Teléfono</span>
-            <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone" MaxLength="13"></asp:TextBox>
+
+        <div class="col-md-4 position-relative m-1">
+            <label for="txtTelefono" class="form-label">Teléfono</label>
+            <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone" MaxLength="10"></asp:TextBox>
             <asp:Label ID="lblTelefono" runat="server"></asp:Label>
         </div>
-        <div class="input-group mb-3 w-50">
-            <span class="input-group-text">Nombre Fantasia</span>
-            <asp:TextBox ID="txtNombreFantasia" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
+
+        <div class="col-md-4 position-relative m-1">
+            <label for="txtNombreFantasia" class="form-label">Nombre Fantasia</label>
+            <asp:TextBox ID="txtNombreFantasia" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label ID="lblNombreFantasia" runat="server"></asp:Label>
         </div>
 
 
-        <div align="center">
-            <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary m-3" />
+        <div class="col-12 m-3" align="center">
+            <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-success m-3 pl-5 pr-5" />
             <br />
             <br />
             <asp:Label ID="lblMensaje" runat="server"></asp:Label>

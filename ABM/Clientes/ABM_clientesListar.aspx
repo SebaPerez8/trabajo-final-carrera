@@ -45,7 +45,7 @@
     <form id="formClientesListar" runat="server">
 
         <div align="center">
-            <asp:Button ID="btnListar" runat="server" Text="Listar" CssClass="btn btn-warning m-5" />
+            <asp:Button ID="btnListar" runat="server" Text="Listar" CssClass="btn btn-warning m-5 pl-5 pr-5" />
         </div>
 
         <div class="container my-5">

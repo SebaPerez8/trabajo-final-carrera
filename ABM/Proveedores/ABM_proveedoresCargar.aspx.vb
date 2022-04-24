@@ -110,7 +110,7 @@
 
         If txtCUIL.Text = "" OrElse IsDBNull(txtCUIL) Then
             todoOK = False
-            lblCUIT.Text = "Debe completar este campo"
+            txtCUIL.CssClass = txtCUIL.CssClass + " is-invalid"
         End If
         If txtRazonSocial.Text = "" OrElse IsDBNull(txtRazonSocial) Then
             todoOK = False

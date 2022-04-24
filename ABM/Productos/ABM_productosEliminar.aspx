@@ -40,39 +40,41 @@
         </div>
     </div>
 
-    <form id="formProductosEliminar" runat="server">
+    <form id="formProductosEliminar" runat="server" class="row g-3">
 
-        <div>
-            <div class="m-0 row justify-content-center">
-                <span class="input-group-text">Codigo de Producto</span>
-                <asp:TextBox ID="txtCodigoProducto" runat="server" CssClass="form-control w-50" placeholder="0000000001"></asp:TextBox>
+        <div class="container-fluid">
+            <label class="form-label row justify-content-center">Código de Producto</label>
+            <div class="row justify-content-center">
+                <asp:TextBox ID="txtCodigoProducto" runat="server" CssClass="form-control" MaxLength="13" Width="300px"></asp:TextBox>
             </div>
             <div align="center" class="mb-5">
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3" />
-                <br />
-            </div>
-
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Producto</span>
-                <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Precio</span>
-                <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
-            </div>
-
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Categoria</span>
-                <asp:TextBox ID="txtCategoria" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Fecha</span>
-                <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3 pl-5 pr-5" />
             </div>
         </div>
 
-        <div align="center">
-            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3" />
+         <div class="col-md-4 position-relative m-1">
+           <label class="form-label">Producto</label>
+            <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
+        </div>
+
+         <div class="col-md-3 position-relative m-1">
+            <label class="form-label">Precio</label>
+            <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
+        </div>
+
+         <div class="col-md-4 position-relative m-1">
+            <label class="form-label">Categoria</label>
+            <asp:TextBox ID="txtCategoria" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
+        </div>
+
+         <div class="col-md-3 position-relative m-1">
+            <label class="form-label">Fecha</label>
+            <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
+        </div>
+
+
+        <div class="col-12 m-3" align="center">
+            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3 pl-5 pr-5" />
             <br />
             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </div>

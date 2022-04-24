@@ -39,46 +39,47 @@
             </div>
         </div>
     </div>
+    <br />
+    <br />
+    <form id="formProductosCargar" runat="server" class="row g-3">
 
-    <form id="formProductosCargar" runat="server">
 
-        <div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Codigo de Producto</span>
-                <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control" placeholder="0000000001"></asp:TextBox>
-            &nbsp;<asp:Label ID="lblProductos" runat="server"></asp:Label>
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Producto</span>
-                <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control" placeholder="Memoria USB Kingtone 16GB"></asp:TextBox>
-            &nbsp;<asp:Label ID="lblNombre" runat="server"></asp:Label>
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Precio</span>
-                <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" placeholder="1000"></asp:TextBox>
-            &nbsp;<asp:Label ID="lblPrecio" runat="server"></asp:Label>
-            </div>
+        <div class="col-md-4 position-relative m-1">
+            <label for="txtCodigo" class="form-label">Codigo de Producto</label>
+            <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control" placeholder="0000000001"></asp:TextBox>
+            <asp:Label ID="lblProductos" runat="server"></asp:Label>
+        </div>
+        <div class="col-md-4 position-relative m-1">
+            <label class="form-label">Producto</label>
+            <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control" placeholder="Memoria USB Kingtone 16GB"></asp:TextBox>
+            <asp:Label ID="lblNombre" runat="server"></asp:Label>
+        </div>
+        <div class="col-md-3 position-relative m-1">
+            <label class="form-label">Precio</label>
+            <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" placeholder="1000"></asp:TextBox>
+            <asp:Label ID="lblPrecio" runat="server"></asp:Label>
+        </div>
 
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Foto</span>
-                <asp:FileUpload ID="fuFoto" runat="server" CssClass="btn-secondary p-1" />
-                <asp:Label ID="lblfoto" runat="server"></asp:Label>
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Categoria</span>
-                <asp:DropDownList ID="dplCategoria" runat="server" CssClass="form-control" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="ID_Categoria"></asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [Nombre], [ID_Categoria] FROM [Categorias] ORDER BY [Nombre]"></asp:SqlDataSource>
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Fecha</span>
-                <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
-            &nbsp;<asp:Label ID="lblFecha" runat="server"></asp:Label>
-            </div>
+        <div class="col-md-4 position-relative m-1">
+            <label class="form-label">Foto</label>
+            <asp:FileUpload ID="fuFoto" runat="server" CssClass="btn-secondary p-1" />
+            <asp:Label ID="lblfoto" runat="server"></asp:Label>
+        </div>
+        <div class="col-md-4 position-relative m-1">
+            <label class="form-label">Categoria</label>
+            <asp:DropDownList ID="dplCategoria" runat="server" CssClass="form-control" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="ID_Categoria"></asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [Nombre], [ID_Categoria] FROM [Categorias] ORDER BY [Nombre]"></asp:SqlDataSource>
+        </div>
+        <div class="col-md-3 position-relative m-1">
+            <label class="form-label">Fecha</label>
+            <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+            <asp:Label ID="lblFecha" runat="server"></asp:Label>
         </div>
 
 
-        <div align="center">
-            <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary m-3" />
+
+        <div class="col-12 m-3" align="center">
+            <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-success m-3 pl-5 pr-5" />
             <br />
             <br />
             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
