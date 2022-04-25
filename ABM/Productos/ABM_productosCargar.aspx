@@ -46,24 +46,24 @@
 
         <div class="col-md-4 position-relative m-1">
             <label for="txtCodigo" class="form-label">Codigo de Producto</label>
-            <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control" placeholder="0000000001"></asp:TextBox>
-            <asp:Label ID="lblProductos" runat="server"></asp:Label>
+            <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:Label ID="lblProductos" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
         <div class="col-md-4 position-relative m-1">
             <label class="form-label">Producto</label>
-            <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control" placeholder="Memoria USB Kingtone 16GB"></asp:TextBox>
-            <asp:Label ID="lblNombre" runat="server"></asp:Label>
+            <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:Label ID="lblNombre" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
         <div class="col-md-3 position-relative m-1">
             <label class="form-label">Precio</label>
-            <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" placeholder="1000"></asp:TextBox>
-            <asp:Label ID="lblPrecio" runat="server"></asp:Label>
+            <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:Label ID="lblPrecio" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
 
         <div class="col-md-4 position-relative m-1">
             <label class="form-label">Foto</label>
             <asp:FileUpload ID="fuFoto" runat="server" CssClass="btn-secondary p-1" />
-            <asp:Label ID="lblfoto" runat="server"></asp:Label>
+            <asp:Label ID="lblFoto" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
         <div class="col-md-4 position-relative m-1">
             <label class="form-label">Categoria</label>
@@ -73,7 +73,7 @@
         <div class="col-md-3 position-relative m-1">
             <label class="form-label">Fecha</label>
             <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
-            <asp:Label ID="lblFecha" runat="server"></asp:Label>
+            <asp:Label ID="lblFecha" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
 
 
@@ -82,7 +82,7 @@
             <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-success m-3 pl-5 pr-5" />
             <br />
             <br />
-            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+            <asp:Label ID="lblMensaje" runat="server" Font-Size="Large" ForeColor="#AA0610"></asp:Label>
         </div>
 
 

@@ -12,7 +12,7 @@
         Dim Control2 As Boolean = False
         Dim Existen As Boolean = True
 
-        'COntrol Obligatorios:
+        'Control Obligatorios:
 
         If ControldeBlancosObligatorio(Control1) Then
             If Existen = ControldeBlancos(Control2) Then
@@ -29,7 +29,7 @@
                         If Not Cliente.ControlExistencia(Val(txtDNI.Text)) Then
                             Cliente.Grabar()
                             MsgBox("Se grabo con exito el Cliente", MsgBoxStyle.Information, "AVISO")
-                            LimpiarFromProducto()
+                            LimpiarFormProducto()
                         Else
                             MsgBox("Ese Documento ya existe en la base de Datos", MsgBoxStyle.Exclamation, "AVISO")
                             txtDNI.Focus()
@@ -55,7 +55,7 @@
                     If Not Cliente.ControlExistencia(Val(txtDNI.Text)) Then
                         Cliente.Grabar()
                         MsgBox("Se grabo con exito el Cliente", MsgBoxStyle.Information, "AVISO")
-                        LimpiarFromProducto()
+                        LimpiarFormProducto()
                     Else
                         MsgBox("Ese Documento ya existe en la base de Datos", MsgBoxStyle.Exclamation, "AVISO")
                         txtDNI.Focus()
@@ -74,7 +74,7 @@
             lblMensaje.Text = "Existen campos Obligatorios incompletos"
         End If
     End Sub
-    Public Sub LimpiarFromProducto()
+    Public Sub LimpiarFormProducto()
         txtDNI.Text = ""
         txtNombre.Text = ""
         txtTelefono.Text = ""
@@ -86,10 +86,13 @@
 
         If txtDNI.Text = "" OrElse IsDBNull(txtDNI) Then
             todoOK = False
+            txtDNI.CssClass = txtDNI.CssClass + " is-invalid"
             lblDNI.Text = "Debe completar este campo"
         End If
         If txtNombre.Text = "" OrElse IsDBNull(txtNombre) Then
             todoOK = False
+            txtNombre.CssClass = txtNombre.CssClass + " is-invalid"
+            ' txtNombre.CssClass = txtNombre.CssClass + " form-control"
             lblNombre.Text = "Debe completar este campo"
         End If
 

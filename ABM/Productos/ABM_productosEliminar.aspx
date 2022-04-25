@@ -76,7 +76,7 @@
         <div class="col-12 m-3" align="center">
             <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3 pl-5 pr-5" />
             <br />
-            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+            <asp:Label ID="lblMensaje" runat="server" Font-Size="Large" ForeColor="#AA0610"></asp:Label>
         </div>
 
 

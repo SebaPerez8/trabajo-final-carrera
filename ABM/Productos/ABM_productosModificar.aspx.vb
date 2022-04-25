@@ -145,6 +145,7 @@
 
         If txtProducto.Text = "" OrElse IsDBNull(txtProducto) Then
             todoOK = False
+            txtProducto.CssClass = txtProducto.CssClass + " is-invalid"
             lblNombre.Text = "Debe completar este campo"
         End If
 

@@ -94,7 +94,7 @@ Public Class productos
 
         If IsDBNull(fuFoto) Then
 
-            lblPrecio.Text = "Este campo esta Incompleto"
+            lblFoto.Text = "Este campo esta Incompleto"
         End If
         'faltaria controlar el campo foto, mas adelante.
 
@@ -139,10 +139,12 @@ Public Class productos
 
         If txtCodigo.Text = "" OrElse IsDBNull(txtCodigo) Then
             todoOK = False
+            txtCodigo.CssClass = txtCodigo.CssClass + " is-invalid"
             lblProductos.Text = "Debe completar este campo"
         End If
         If txtProducto.Text = "" OrElse IsDBNull(txtProducto) Then
             todoOK = False
+            txtProducto.CssClass = txtProducto.CssClass + " is-invalid"
             lblNombre.Text = "Debe completar este campo"
         End If
 

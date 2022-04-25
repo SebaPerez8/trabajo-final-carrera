@@ -116,10 +116,12 @@
     Public Function ControldeBlancosObligatorios(todoOK As Boolean) As Boolean
 
 
-        If txtCUIL.Text = "" OrElse IsDBNull(txtCUIL) Then
+        If txtRazonSocial.Text = "" OrElse IsDBNull(txtRazonSocial) Then
             todoOK = False
-
+            txtRazonSocial.CssClass = txtRazonSocial.CssClass + " is-invalid"
+            lblRazon.Text = "Debe completar este campo"
         End If
+
 
 
         Return todoOK
@@ -171,6 +173,11 @@
 
             lblContacto.Text = "Este campo esta Incompleto"
         End If
+        If txtNombreFantasia.Text = "" OrElse IsDBNull(txtNombreFantasia) OrElse txtNombreFantasia.Text = " " Then
+
+            lblNombreFantasia.Text = "Este campo esta Incompleto"
+        End If
+
 
     End Sub
 

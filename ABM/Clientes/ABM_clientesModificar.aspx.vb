@@ -24,6 +24,7 @@
                 Else
 
                     MsgBox("Ese Cliente no existe ", MsgBoxStyle.Exclamation, "AVISO")
+
                     txtDNI.Text = ""
                     txtDNI.Focus()
                 End If
@@ -119,6 +120,7 @@
 
         If txtNombre.Text = "" OrElse IsDBNull(txtNombre) Then
             todoOK = False
+            txtNombre.CssClass = txtNombre.CssClass + " is-invalid"
             lblNombre.Text = "Debe completar este campo"
         End If
 

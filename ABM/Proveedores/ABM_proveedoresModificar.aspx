@@ -55,46 +55,46 @@
         <div class="col-md-4 position-relative m-1">
             <label for="txtRazonSocial" class="form-label">Razón Social</label>
             <asp:TextBox ID="txtRazonSocial" runat="server" CssClass="form-control"></asp:TextBox>
-             <asp:Label ID="lblRazon" runat="server"></asp:Label>
+            <asp:Label ID="lblRazon" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
 
         <div class="col-md-4 position-relative m-1">
             <label for="txtDireccion" class="form-label">Dirección</label>
             <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
-            <asp:Label ID="lblDireccion" runat="server"></asp:Label>
+            <asp:Label ID="lblDireccion" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
 
         <div class="col-md-4 position-relative m-1">
             <label for="txtCorreo" class="form-label">Correo electrónico</label>
             <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
-             <asp:Label ID="lblCorreo" runat="server"></asp:Label>
+            <asp:Label ID="lblCorreo" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
 
         <div class="col-md-4 position-relative m-1">
             <label for="txtContacto" class="form-label">Contacto Principal</label>
             <asp:TextBox ID="txtContacto" runat="server" CssClass="form-control"></asp:TextBox>
-            <asp:Label ID="lblContacto" runat="server"></asp:Label>
+            <asp:Label ID="lblContacto" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
 
         <div class="col-md-4 position-relative m-1">
             <label for="txtTelefono" class="form-label">Teléfono</label>
             <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone" MaxLength="10"></asp:TextBox>
-             <asp:Label ID="lblTelefono" runat="server"></asp:Label>
+            <asp:Label ID="lblTelefono" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
 
         <div class="col-md-4 position-relative m-1">
             <label for="txtNombreFantasia" class="form-label">Nombre Fantasia</label>
             <asp:TextBox ID="txtNombreFantasia" runat="server" CssClass="form-control"></asp:TextBox>
-             <asp:Label ID="lblNombreFantasia" runat="server"></asp:Label>
+            <asp:Label ID="lblNombreFantasia" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
 
-     
+
 
 
         <div class="col-12 m-3" align="center">
-            <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-primary m-3 pl-5 pr-5"/>
+            <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-primary m-3 pl-5 pr-5" />
             <br />
-            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+            <asp:Label ID="lblMensaje" runat="server" Font-Size="Large" ForeColor="#AA0610"></asp:Label>
         </div>
 
     </form>
