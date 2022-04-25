@@ -1,11 +1,12 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Principal.Master" CodeBehind="ABM_productosListar.aspx.vb" Inherits="trabajo_final_carrera.ABM_productosListar" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-     <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 d-flex justify-content-center">
                 <h1 class="m-3 pb-3 text-center">Productos</h1>
@@ -39,9 +40,9 @@
     </div>
 
     <form id="formProductosListar" runat="server">
-      
+
         <div align="center">
-            <asp:Button ID="btnListar" runat="server" Text="Listar" CssClass="btn btn-warning m-5" Width="112px" />
+            <asp:Button ID="btnListar" runat="server" Text="Listar" CssClass="btn btn-warning m-5 pl-5 pr-5" />
         </div>
 
         <div class="container my-5">

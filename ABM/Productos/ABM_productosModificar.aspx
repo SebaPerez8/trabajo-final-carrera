@@ -38,50 +38,49 @@
         </div>
     </div>
 
-    <form id="formProductosModificar" runat="server">
-       
-         <div>
-            <div class="m-0 row justify-content-center">
-                <span class="input-group-text">Codigo de Producto</span>
-                <asp:TextBox ID="txtCodigoProducto" runat="server" CssClass="form-control w-50"></asp:TextBox>
+    <form id="formProductosModificar" runat="server" class="row g-3">
+
+        <div class="container-fluid">
+            <label class="form-label row justify-content-center">Código de Producto</label>
+            <div class="row justify-content-center">
+                <asp:TextBox ID="txtCodigoProducto" runat="server" CssClass="form-control" MaxLength="13" Width="300px"></asp:TextBox>
             </div>
             <div align="center" class="mb-5">
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3" />
-                <br />
-                <asp:Label ID="lblMensajeModificar" runat="server"></asp:Label>
-            </div>
-
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Producto</span>
-                <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control"></asp:TextBox>
-                <asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label>
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Precio</span>
-                <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control"></asp:TextBox>
-                <asp:Label ID="lblPrecio" runat="server" Text="Label"></asp:Label>
-            </div>
-
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Foto</span>
-                <asp:FileUpload ID="fuFoto" runat="server" CssClass="btn-secondary p-1" />
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Categoria</span>
-                <asp:DropDownList ID="dplCategoria" runat="server" CssClass="form-control" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="ID_Categoria"></asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [ID_Categoria], [Nombre] FROM [Categorias] ORDER BY [Nombre]"></asp:SqlDataSource>
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Fecha</span>
-                <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="DateTime"></asp:TextBox>
-                <asp:Label ID="lblFechaAlta" runat="server"></asp:Label>
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3 pl-5 pr-5" />
             </div>
         </div>
 
-        <div align="center">
-            <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-success m-3" />
+        <div class="col-md-4 position-relative m-1">
+            <label class="form-label">Producto</label>
+            <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:Label ID="lblNombre" runat="server" ForeColor="#AA0610"></asp:Label>
+        </div>
+        <div class="col-md-3 position-relative m-1">
+            <label class="form-label">Precio</label>
+            <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:Label ID="lblPrecio" runat="server" ForeColor="#AA0610"></asp:Label>
+        </div>
+
+        <div class="col-md-4 position-relative m-1">
+            <label class="form-label">Foto</label>
+            <asp:FileUpload ID="fuFoto" runat="server" CssClass="btn-secondary p-1" />
+            <asp:Label ID="lblFoto" runat="server" ForeColor="#AA0610"></asp:Label>
+        </div>
+        <div class="col-md-4 position-relative m-1">
+            <label class="form-label">Categoria</label>
+            <asp:DropDownList ID="dplCategoria" runat="server" CssClass="form-control" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="ID_Categoria"></asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [Nombre], [ID_Categoria] FROM [Categorias] ORDER BY [Nombre]"></asp:SqlDataSource>
+        </div>
+        <div class="col-md-3 position-relative m-1">
+            <label class="form-label">Fecha</label>
+            <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+            <asp:Label ID="lblFechaAlta" runat="server" ForeColor="#AA0610"></asp:Label>
+        </div>
+
+        <div class="col-12 m-3" align="center">
+            <asp:Button ID="btnModificar" runat="server" Text="Modificar" CssClass="btn btn-primary m-3 pl-5 pr-5" />
             <br />
-            <asp:Label ID="lblMensajeFinal" runat="server"></asp:Label>
+            <asp:Label ID="lblMensaje" runat="server" Font-Size="Large" ForeColor="#AA0610"></asp:Label>
         </div>
 
 

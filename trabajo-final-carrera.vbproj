@@ -1806,7 +1806,7 @@
     </Compile>
     <Compile Include="ABM\Clientes\ABM_clientesEliminar.aspx.vb">
       <DependentUpon>ABM_clientesEliminar.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ABM\Productos\ABM_productosEliminar.aspx.designer.vb">
       <DependentUpon>ABM_productosEliminar.aspx</DependentUpon>
@@ -1862,7 +1862,7 @@
     </Compile>
     <Compile Include="ABM\Clientes\ABM_clientesCargar.aspx.vb">
       <DependentUpon>ABM_clientesCargar.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Clase_Clientes.vb" />
     <Compile Include="Clase_Productos.vb" />

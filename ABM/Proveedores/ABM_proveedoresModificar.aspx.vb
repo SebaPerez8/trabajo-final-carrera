@@ -25,17 +25,17 @@
 
                 Else
 
-                    MsgBox("Ese Proveedor no existe ", MsgBoxStyle.Information, "AVISO")
+                    MsgBox("Ese Proveedor no existe ", MsgBoxStyle.Exclamation, "AVISO")
                     txtCUIL.Text = ""
                     txtCUIL.Focus()
                 End If
             Else
-                MsgBox("Es necesario completar el campo de CUIT/CUIL", MsgBoxStyle.Information, "AVISO")
+                MsgBox("Es necesario completar el campo de CUIT/CUIL", MsgBoxStyle.Exclamation, "AVISO")
 
             End If
 
         Catch ex As Exception
-            MsgBox("Hubo un problema, No se pudo Buscar el Proveedor", MsgBoxStyle.Information, "AVISO")
+            MsgBox("Hubo un problema, No se pudo Buscar el Proveedor", MsgBoxStyle.Exclamation, "AVISO")
 
 
         End Try
@@ -116,10 +116,12 @@
     Public Function ControldeBlancosObligatorios(todoOK As Boolean) As Boolean
 
 
-        If txtCUIL.Text = "" OrElse IsDBNull(txtCUIL) Then
+        If txtRazonSocial.Text = "" OrElse IsDBNull(txtRazonSocial) Then
             todoOK = False
-
+            txtRazonSocial.CssClass = txtRazonSocial.CssClass + " is-invalid"
+            lblRazon.Text = "Debe completar este campo"
         End If
+
 
 
         Return todoOK
@@ -171,6 +173,11 @@
 
             lblContacto.Text = "Este campo esta Incompleto"
         End If
+        If txtNombreFantasia.Text = "" OrElse IsDBNull(txtNombreFantasia) OrElse txtNombreFantasia.Text = " " Then
+
+            lblNombreFantasia.Text = "Este campo esta Incompleto"
+        End If
+
 
     End Sub
 

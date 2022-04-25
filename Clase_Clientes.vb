@@ -78,7 +78,7 @@ Public Class Clase_Clientes
         Try
 
 
-            SQL = "INSERT INTO Clientes (DNI,Nombre,Direccion,Telefono,Mail,FechaAlta) VALUES (@DNI,@Nombre,@Direccion,@Telefono,@Mail,@FechaAlta)"
+            SQL = "INSERT INTO Clientes (DNI,Nombre,Direccion,Telefono,Mail,FechaAlta) VALUES (@DNI,@Nombre,IsNUll(@Direccion,''),IsNull(@Telefono,0),IsNUll(@Mail,''),ISNULL(@FechaAlta,GETDATE()))"
             COMANDO.CommandText = SQL
             COMANDO.Parameters.Clear()
 
@@ -135,7 +135,7 @@ Public Class Clase_Clientes
         COMANDO.CommandType = CommandType.Text
         Try
 
-            SQL = "UPDATE Productos  SET  Nombre=@Nombre,Direccion=@Direccion,Telefono=@Telefono, Mail=@Mail , FechaAlta=@FechaAlta where DNI= @DNI "
+            SQL = "UPDATE Clientes  SET  Nombre=@Nombre, Direccion=@Direccion, Telefono=@Telefono, Mail=@Mail where DNI= @DNI "
             COMANDO.CommandText = SQL
             COMANDO.Parameters.Clear()
 
@@ -145,7 +145,7 @@ Public Class Clase_Clientes
             COMANDO.Parameters.AddWithValue("@Direccion", _Direccion)
             COMANDO.Parameters.AddWithValue("@Telefono", _Telefono)
             COMANDO.Parameters.AddWithValue("@Mail", _Mail)
-            COMANDO.Parameters.AddWithValue("@FechaAlta", _FechaAlta)
+
 
             COMANDO.ExecuteNonQuery()
 
@@ -173,11 +173,12 @@ Public Class Clase_Clientes
             If DR.HasRows = True Then
                 encontro = True
                 DR.Read()
-                _Nombre = DR("Nombre")
-                _Direccion = DR("Direccion")
-                _Telefono = DR("Telefono")
-                _Mail = DR("Mail")
-                _FechaAlta = DR("FechaAlta")
+                If (IsDBNull(DR("Nombre"))) Then _Nombre = "" Else _Nombre = DR("Nombre")
+                If (IsDBNull(DR("Direccion"))) Then _Direccion = "" Else _Direccion = DR("Direccion")
+                If (IsDBNull(DR("Telefono"))) Then _Telefono = "" Else _Telefono = DR("Telefono")
+                If (IsDBNull(DR("Mail"))) Then _Mail = "" Else _Mail = DR("Mail")
+                If (IsDBNull(DR("DNI"))) Then _DNI = "" Else _DNI = DR("DNI")
+                If (IsDBNull(DR("FechaAlta"))) Then _FechaAlta = "" Else _FechaAlta = DR("FechaAlta")
             End If
             DR.Close()
         Catch ex As Exception
@@ -189,7 +190,7 @@ Public Class Clase_Clientes
     End Function
 
 
-    Public Sub Eliminar()
+    Public Sub Eliminar(DNI As Integer)
         CONECTOR.Open()
         COMANDO.Connection = CONECTOR
         COMANDO.CommandType = CommandType.Text
@@ -201,7 +202,7 @@ Public Class Clase_Clientes
 
 
 
-            COMANDO.Parameters.AddWithValue("@DNI", _DNI)
+            COMANDO.Parameters.AddWithValue("@DNI", DNI)
 
             COMANDO.ExecuteNonQuery()
 

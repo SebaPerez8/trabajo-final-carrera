@@ -6,36 +6,66 @@
     End Sub
 
     Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim Control1 As Boolean = True
         Try
-            Dim valor As Boolean = False
-            lblMensajeEliminar.Text = ""
-            If valor <> Producto.BuscarProducto(Val(txtCodigoProducto.Text)) Then
-                txtCategoria.Text = Producto.Categoria.ToString()
-                txtProducto.Text = Producto.Nombre_Producto
-                txtPrecio.Text = Producto.Precio_Producto
-                txtFecha.Text = Producto.FechaAlta.ToString()
+            If ControldeBlancosObligatorios(Control1) Then
+                If Producto.BuscarProducto(Val(txtCodigoProducto.Text)) Then
+                    If Producto.BuscarProducto(Val(txtCodigoProducto.Text)) Then
+                        txtCategoria.Text = Producto.Categoria.ToString()
+                        txtProducto.Text = (Producto.Nombre_Producto).ToString
+                        txtPrecio.Text = Producto.Precio_Producto
+                        txtFecha.Text = Producto.FechaAlta.ToString()
+                        ' fuFoto=Producto
+                    Else
+                        MsgBox("Hubo un problema al traer la informacion del Producto", MsgBoxStyle.Exclamation, "AVISO")
+
+                    End If
+                Else
+                    MsgBox("Ese Producto no existe ", MsgBoxStyle.Exclamation, "AVISO")
+                    txtCodigoProducto.Text = ""
+                    txtCodigoProducto.Focus()
+                End If
+
             Else
-                lblMensajeEliminar.Text = "No existe ese Producto"
-                txtCodigoProducto.Focus()
-                txtCodigoProducto.Text = ""
+                MsgBox("Es necesario completar el campo Codigo", MsgBoxStyle.Exclamation, "AVISO")
+
             End If
 
         Catch ex As Exception
-            lblMensajeEliminar.Text = "Hubo un problema al buscar el Producto"
+
+            MsgBox("Hubo un problema, No se pudo Buscar el Producto", MsgBoxStyle.Exclamation, "AVISO")
+
         End Try
+
     End Sub
 
+    Public Function ControldeBlancosObligatorios(todoOK As Boolean) As Boolean
+
+
+        If txtCodigoProducto.Text = "" OrElse IsDBNull(txtCodigoProducto) Then
+            todoOK = False
+
+        End If
+
+
+        Return todoOK
+    End Function
     Protected Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Try
+        Dim ResultadoMensaje As Integer = 0
+
+        ResultadoMensaje = MsgBox("Esta por eliminar un Producto, ¿Desea Continuar?", MsgBoxStyle.YesNo, "AVISO")
+        If ResultadoMensaje = 1 OrElse ResultadoMensaje = 6 Then
+            Try
 
 
-            Producto.Codigo_Producto = txtCodigoProducto.Text
-            Producto.Eliminar()
-            lblMensajeFinal.Text = "Se elimino correctamente el producto"
-            Me.LimpiarCajas()
-        Catch ex As Exception
-            lblMensajeFinal.Text = "No se pudo eliminar  el producto"
-        End Try
+
+                Producto.Eliminar(Val(txtCodigoProducto.Text))
+                MsgBox("Se elimino con exito el Producto", MsgBoxStyle.Exclamation, "AVISO")
+                LimpiarCajas()
+            Catch ex As Exception
+                MsgBox("Hubo un problema, No se pudo eliminar el Producto", MsgBoxStyle.Information, "AVISO")
+            End Try
+        End If
     End Sub
 
     Public Sub LimpiarCajas()

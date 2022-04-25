@@ -43,37 +43,44 @@
     </div>
 
 
-    <form id="formClientesEliminar" runat="server">
+    <form id="formClientesEliminar" runat="server" class="row g-3">
 
-        <div>
-            <div class="m-0 row justify-content-center">
-                <span class="input-group-text">DNI</span>
-                <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control w-50"></asp:TextBox>
+         <div class="container-fluid">
+            <label class="form-label row justify-content-center">DNI</label>
+            <div class="row justify-content-center">
+                <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control" MaxLength="8" Width="300px"></asp:TextBox>
             </div>
             <div align="center" class="mb-5">
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3" />
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text" for="txtNombre">Nombre</span>
-                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Dirección</span>
-                <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Correo electrónico</span>
-                <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
-            </div>
-            <div class="input-group mb-3 w-50">
-                <span class="input-group-text">Teléfono</span>
-                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3 pl-5 pr-5" />
             </div>
         </div>
 
+            <div class="col-md-4 position-relative m-1">
+                <label class="form-label" for="txtNombre">Nombre</label>
+                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
+            </div>
 
-        <div align="center">
-            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3" />
+            <div class="col-md-4 position-relative m-1">
+                <label class="form-label">Dirección</label>
+                <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
+            </div>
+
+            <div class="col-md-4 position-relative m-1">
+                <label class="form-label">Correo electrónico</label>
+                <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email" ReadOnly="True"></asp:TextBox>
+            </div>
+
+           <div class="col-md-4 position-relative m-1">
+                <label class="form-label">Teléfono</label>
+                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Phone" ReadOnly="True"></asp:TextBox>
+            </div>
+       
+
+
+        <div class="col-12 m-3" align="center">
+            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger m-3 pl-5 pr-5" />
+             <br />
+            <asp:Label ID="lblMensaje" runat="server" Font-Size="Large" ForeColor="#AA0610"></asp:Label>
         </div>
 
     </form>

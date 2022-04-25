@@ -41,15 +41,6 @@ Partial Public Class ABM_productosModificar
     Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control lblMensajeModificar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblMensajeModificar As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''Control txtProducto.
     '''</summary>
     '''<remarks>
@@ -93,6 +84,15 @@ Partial Public Class ABM_productosModificar
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents fuFoto As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
+    '''Control lblFoto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblFoto As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control dplCategoria.
@@ -140,11 +140,11 @@ Partial Public Class ABM_productosModificar
     Protected WithEvents btnModificar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control lblMensajeFinal.
+    '''Control lblMensaje.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblMensajeFinal As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblMensaje As Global.System.Web.UI.WebControls.Label
 End Class

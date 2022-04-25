@@ -68,6 +68,15 @@ Partial Public Class ABM_proveedoresEliminar
     Protected WithEvents txtCorreo As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control txtFecha.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtFecha As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Control txtContacto.
     '''</summary>
     '''<remarks>
@@ -84,6 +93,15 @@ Partial Public Class ABM_proveedoresEliminar
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtTelefono As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtNombreFantasia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtNombreFantasia As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control btnEliminar.
