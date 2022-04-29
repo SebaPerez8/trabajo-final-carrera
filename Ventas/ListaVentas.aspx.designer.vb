@@ -11,50 +11,32 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Ventas
+Partial Public Class ListaVentas
 
     '''<summary>
-    '''Control formVentas.
+    '''Control formVentasListar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents formVentas As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents formVentasListar As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control txtProducto.
+    '''Control btnListar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtProducto As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnListar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control lblProducto.
+    '''Control grillaVentas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblProducto As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Control txtCantidad.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtCantidad As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control lblPrecioTotal.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblPrecioTotal As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents grillaVentas As Global.System.Web.UI.WebControls.GridView
 End Class
