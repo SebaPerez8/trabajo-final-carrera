@@ -1783,7 +1783,8 @@
     <Content Include="Tema\vendor\jquery\jquery.min.js" />
     <Content Include="Tema\vendor\jquery\jquery.slim.js" />
     <Content Include="Tema\vendor\jquery\jquery.slim.min.js" />
-    <Content Include="Ventas\Ventas.aspx" />
+    <Content Include="Ventas\ListaVentas.aspx" />
+    <Content Include="Ventas\NuevaVenta.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1907,11 +1908,18 @@
       <DependentUpon>ABM_proveedoresCargar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Ventas\Ventas.aspx.designer.vb">
-      <DependentUpon>Ventas.aspx</DependentUpon>
+    <Compile Include="Ventas\ListaVentas.aspx.designer.vb">
+      <DependentUpon>ListaVentas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Ventas\Ventas.aspx.vb">
-      <DependentUpon>Ventas.aspx</DependentUpon>
+    <Compile Include="Ventas\ListaVentas.aspx.vb">
+      <DependentUpon>ListaVentas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\NuevaVenta.aspx.designer.vb">
+      <DependentUpon>NuevaVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\NuevaVenta.aspx.vb">
+      <DependentUpon>NuevaVenta.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
