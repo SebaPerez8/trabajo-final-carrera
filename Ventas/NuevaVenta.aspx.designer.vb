@@ -23,6 +23,60 @@ Partial Public Class Ventas
     Protected WithEvents formVentas As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control txtIdVenta.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtIdVenta As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtFecha.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtFecha As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtDNI.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtDNI As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtNombre.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control btnNuevoCliente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnNuevoCliente As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control dplMetodo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents dplMetodo As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''Control txtProducto.
     '''</summary>
     '''<remarks>
@@ -30,6 +84,60 @@ Partial Public Class Ventas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtProducto As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtCodigo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtCodigo As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control btnBuscarProducto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnBuscarProducto As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control txtPrecioUnitario.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtPrecioUnitario As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtCantidad.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtCantidad As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtMontoTotal.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtMontoTotal As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control GrillaVentas.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GrillaVentas As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
     '''Control btnAgregar.
@@ -50,24 +158,6 @@ Partial Public Class Ventas
     Protected WithEvents btnQuitar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control txtPrecioTotal.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtPrecioTotal As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control lstProductos.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lstProductos As Global.System.Web.UI.WebControls.ListBox
-
-    '''<summary>
     '''Control btnConfirmar.
     '''</summary>
     '''<remarks>
@@ -84,49 +174,4 @@ Partial Public Class Ventas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnImprimir As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control txtNombre.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control txtDNI.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtDNI As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control btnNuevo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnNuevo As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control txtCorreo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtCorreo As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control txtTelefono.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtTelefono As Global.System.Web.UI.WebControls.TextBox
 End Class

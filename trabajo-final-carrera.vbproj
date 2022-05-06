@@ -51,6 +51,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web.DynamicData" />
@@ -1783,6 +1784,7 @@
     <Content Include="Tema\vendor\jquery\jquery.min.js" />
     <Content Include="Tema\vendor\jquery\jquery.slim.js" />
     <Content Include="Tema\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Ventas\AgregarProducto.aspx" />
     <Content Include="Ventas\ListaVentas.aspx" />
     <Content Include="Ventas\NuevaVenta.aspx" />
     <Content Include="Web.config" />
@@ -1906,6 +1908,13 @@
     </Compile>
     <Compile Include="ABM\Proveedores\ABM_proveedoresCargar.aspx.vb">
       <DependentUpon>ABM_proveedoresCargar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\AgregarProducto.aspx.designer.vb">
+      <DependentUpon>AgregarProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\AgregarProducto.aspx.vb">
+      <DependentUpon>AgregarProducto.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Ventas\ListaVentas.aspx.designer.vb">
