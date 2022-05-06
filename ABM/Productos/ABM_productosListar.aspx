@@ -62,13 +62,13 @@
 
 
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="Select p.ID_producto as [Codigo de Producto], 
-p.Nombre as [Nombre del Producto],
-c.Nombre as [Nombre de Categoria],
-p.Precio as [Precio del Producto],
-p.FechaAlta as [Fecha de Alta]
-from Productos p
-inner join Categorias c on p.Id_Categoria=c.ID_Categoria
-order by p.Id_Categoria"></asp:SqlDataSource>
+                                p.Nombre as [Nombre del Producto],
+                                c.Nombre as [Nombre de Categoria],
+                                p.Precio as [Precio del Producto],
+                                p.FechaAlta as [Fecha de Alta]
+                                from Productos p
+                                inner join Categorias c on p.Id_Categoria=c.ID_Categoria
+                                order by p.Id_Categoria"></asp:SqlDataSource>
 
 
 

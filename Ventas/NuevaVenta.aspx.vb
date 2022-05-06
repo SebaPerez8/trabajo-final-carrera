@@ -5,4 +5,13 @@
 
     End Sub
 
+    Protected Sub btnBuscarProducto_Click(sender As Object, e As EventArgs) Handles btnBuscarProducto.Click
+
+        Dim sUrl As String = "AgregarProducto.aspx"
+        Dim sScript As String = "<script language =javascript> "
+        sScript += "window.open('" & sUrl & "',null,'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=1000,height=500,left=200,top=200');"
+        sScript += "</script> "
+        Response.Write(sScript)
+
+    End Sub
 End Class
