@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="AgregarProducto.aspx.vb" Inherits="trabajo_final_carrera.AgregarProducto" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="AgregarCliente.aspx.vb" Inherits="trabajo_final_carrera.AgregarCliente" %>
 
 <!DOCTYPE html>
 
@@ -11,18 +11,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agregar Producto</title>
+    <title>Agregar Cliente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-    <form id="formAgregarProducto" runat="server" class="mt-3">
-        
+    <form id="formAgregarCliente" runat="server" class="mt-3">
+
         <div class="container-fluid">
             <asp:Button ID="btnVolver" runat="server" Text="<< Volver" CssClass="btn btn-danger ml-3 mt-4 mb-1"/>
-            <label class="form-label row justify-content-center">Producto</label>
+            <label class="form-label row justify-content-center">Nombre Cliente</label>
             <div class="row justify-content-center">
-                <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control" MaxLength="13" Width="300px"></asp:TextBox>
+                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" MaxLength="13" Width="300px"></asp:TextBox>
             </div>
             <div align="center" class="mb-5">
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3 pl-5 pr-5" />
@@ -31,14 +31,12 @@
 
         <div align="center">
 
-            <asp:GridView ID="grillaProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="ID_producto" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" CellSpacing="4" HorizontalAlign="Center">
+            <asp:GridView ID="grillaProductos" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" CellSpacing="4" HorizontalAlign="Center">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
-                    <asp:BoundField DataField="ID_producto" HeaderText="ID_producto" ReadOnly="True" SortExpression="ID_producto" />
+                    <asp:BoundField DataField="DNI" HeaderText="DNI" SortExpression="DNI" />
                     <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                    <asp:BoundField DataField="Precio" HeaderText="Precio" SortExpression="Precio" />
-                    <asp:BoundField DataField="FechaAlta" HeaderText="FechaAlta" SortExpression="FechaAlta" />
                 </Columns>
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -54,9 +52,9 @@
 
 
 
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [ID_producto], [Nombre], [Precio], [FechaAlta] FROM [Productos] WHERE ([Nombre] LIKE '%' + @Nombre + '%') ORDER BY [ID_producto]">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [DNI], [Nombre] FROM [Clientes] WHERE ([Nombre] LIKE '%' + @Nombre + '%')">
                 <SelectParameters>
-                    <asp:ControlParameter ControlID="txtProducto" DefaultValue="%%" Name="Nombre" PropertyName="Text" Type="String" />
+                    <asp:ControlParameter ControlID="txtNombre" DefaultValue="%%" Name="Nombre" PropertyName="Text" Type="String" />
                 </SelectParameters>
                 
             </asp:SqlDataSource>
@@ -64,5 +62,3 @@
     </form>
 </body>
 </html>
-
-

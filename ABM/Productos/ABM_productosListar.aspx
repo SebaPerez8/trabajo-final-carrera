@@ -49,7 +49,7 @@
             <h4>Listado de productos</h4>
 
 
-            <asp:GridView ID="grillaProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="Codigo de Producto" DataSourceID="SqlDataSource1">
+            <asp:GridView ID="grillaProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="Codigo de Producto" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True">
                 <Columns>
                     <asp:BoundField DataField="Codigo de Producto" HeaderText="Codigo de Producto" ReadOnly="True" SortExpression="Codigo de Producto" />
                     <asp:BoundField DataField="Nombre del Producto" HeaderText="Nombre del Producto" SortExpression="Nombre del Producto" />
