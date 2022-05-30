@@ -11,16 +11,16 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class AdministrarOrdenes
+Partial Public Class Reparacion
 
     '''<summary>
-    '''Control formAdminOrdenes.
+    '''Control formReparacion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents formAdminOrdenes As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents formReparacion As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
     '''Control txtOrden.

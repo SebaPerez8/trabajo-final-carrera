@@ -73,8 +73,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
-                        <a class="collapse-item" href="utilities-color.html">Stock</a>
-                        <a class="collapse-item" href="utilities-border.html">Proveedores</a>
+                        <a class="collapse-item" href="<%= ResolveClientUrl("~/Compras/Stock.aspx") %>">Stock</a>
+                        <a class="collapse-item" href="<%= ResolveClientUrl("~/Compras/Proveedores.aspx") %>">Proveedores</a>
 
                     </div>
                 </div>
@@ -90,9 +90,8 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
-                        <a class="collapse-item" href="<%= ResolveClientUrl("~/ServicioTecnico/administrarOrdenes.aspx") %>">Administrar ordenes</a>
-                        <a class="collapse-item" href="blank.html">Nueva orden</a>
-                        <a class="collapse-item" href="blank.html">Pedido de insumos</a>
+                        <a class="collapse-item" href="<%= ResolveClientUrl("~/ServicioTecnico/AdministrarOrdenes.aspx") %>">Administrar ordenes</a>
+                        <a class="collapse-item" href="<%= ResolveClientUrl("~/ServicioTecnico/NuevaOrden.aspx") %>">Nueva orden</a>
 
                     </div>
                 </div>
