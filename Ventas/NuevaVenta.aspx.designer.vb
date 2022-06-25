@@ -68,6 +68,15 @@ Partial Public Class Ventas
     Protected WithEvents btnNuevoCliente As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Control btnBuscarCliente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnBuscarCliente As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control dplMetodo.
     '''</summary>
     '''<remarks>

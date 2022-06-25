@@ -52,7 +52,7 @@
             <h4>Listado de clientes</h4>
 
 
-            <asp:GridView ID="grillaClientes" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+            <asp:GridView ID="grillaClientes" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True">
                 <Columns>
                     <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
                     <asp:BoundField DataField="Nombre y Apellido" HeaderText="Nombre y Apellido" SortExpression="Nombre y Apellido" />

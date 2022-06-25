@@ -3,6 +3,7 @@
     Dim Venta As New Clase_Ventas
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+
         If Not (Session("Nombre") Is Nothing) Then
             txtProducto.Text = TryCast(Session("Nombre"), String)
             If Not (Session("Stock") Is Nothing) Then
@@ -29,12 +30,16 @@
 
     Protected Sub btnBuscarProducto_Click(sender As Object, e As EventArgs) Handles btnBuscarProducto.Click
 
-        Dim sUrl As String = "AgregarProducto.aspx"
-        Dim sScript As String = "<script language =javascript> "
-        sScript += "window.open('" & sUrl & "',null,'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=1000,height=500,left=200,top=200');"
-        sScript += "</script> "
-        Response.Write(sScript)
+        Response.Redirect("AgregarProducto.aspx")
 
+    End Sub
+
+    Protected Sub btnNuevoCliente_Click(sender As Object, e As EventArgs) Handles btnNuevoCliente.Click
+        Response.Redirect("~/ABM/Clientes/ABM_clientesCargar.aspx")
+    End Sub
+
+    Protected Sub btnBuscarCliente_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
+        Response.Redirect("AgregarCliente.aspx")
     End Sub
 
     Protected Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click

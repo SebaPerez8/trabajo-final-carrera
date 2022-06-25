@@ -1,9 +1,7 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Principal.Master" CodeBehind="AdministrarOrdenes.aspx.vb" Inherits="trabajo_final_carrera.AdministrarOrdenes" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Principal.Master" CodeBehind="Reparacion.aspx.vb" Inherits="trabajo_final_carrera.Reparacion" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-
-
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -16,13 +14,13 @@
         </div>
     </div>
 
-    <div class="pb-3">
+     <div class="pb-3">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active">Entrada</a>
+                <a class="nav-link" href="AdministrarOrdenes.aspx">Entrada</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Reparacion.aspx">Reparacion</a>
+                <a class="nav-link active">Reparacion</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="Salida.aspx">Salida</a>
@@ -30,7 +28,7 @@
         </ul>
     </div>
 
-    <form id="formAdminOrdenes" runat="server" class="row g-3">
+    <form id="formReparacion" runat="server" class="row g-3">
 
         <div class="col-md-4 position-relative m-1">
             <label class="form-label">N° de orden</label>
@@ -50,30 +48,5 @@
 
 
     </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </asp:Content>
