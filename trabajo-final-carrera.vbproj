@@ -1853,6 +1853,7 @@
       <DependentUpon>ABM_proveedoresModificar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Clase_Ventas.vb" />
     <Compile Include="ServicioTecnico\administrarOrdenes.aspx.designer.vb">
       <DependentUpon>administrarOrdenes.aspx</DependentUpon>
     </Compile>

@@ -33,10 +33,11 @@
             <asp:GridView ID="grillaProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="ID_producto" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" CellSpacing="4" HorizontalAlign="Center">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
-                    <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
+                    <asp:CommandField ButtonType="Button" ShowSelectButton="true"/>
                     <asp:BoundField DataField="ID_producto" HeaderText="ID_producto" ReadOnly="True" SortExpression="ID_producto" />
                     <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                     <asp:BoundField DataField="Precio" HeaderText="Precio" SortExpression="Precio" />
+                    <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" SortExpression="Cantidad" />
                     <asp:BoundField DataField="FechaAlta" HeaderText="FechaAlta" SortExpression="FechaAlta" />
                 </Columns>
                 <EditRowStyle BackColor="#2461BF" />
@@ -53,7 +54,9 @@
 
 
 
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [ID_producto], [Nombre], [Precio], [FechaAlta] FROM [Productos] WHERE ([Nombre] LIKE '%' + @Nombre + '%') ORDER BY [ID_producto]">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT P.[ID_producto], [Nombre], [Precio],SP.Cantidad, [FechaAlta] 
+FROM [Productos] P left join [Stock_Producto] SP on p.ID_producto = SP.ID_producto
+WHERE ([Nombre] LIKE '%' + @Nombre + '%') ORDER BY [ID_producto]">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="txtProducto" DefaultValue="%%" Name="Nombre" PropertyName="Text" Type="String" />
                 </SelectParameters>
