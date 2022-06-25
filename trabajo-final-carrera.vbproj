@@ -1887,6 +1887,7 @@
       <DependentUpon>ABM_clientesCargar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Clase_Ventas.vb" />
     <Compile Include="Clase_Clientes.vb" />
     <Compile Include="Clase_Productos.vb" />
     <Compile Include="Clase_Proveedores.vb" />

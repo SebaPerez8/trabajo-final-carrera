@@ -122,6 +122,15 @@ Partial Public Class Ventas
     Protected WithEvents txtPrecioUnitario As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control txtStock.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtStock As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Control txtCantidad.
     '''</summary>
     '''<remarks>

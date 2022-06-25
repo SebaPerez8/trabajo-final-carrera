@@ -72,6 +72,7 @@
 
         Else
             lblMensaje.Text = "Existen campos Obligatorios incompletos"
+            'inserto comentario
         End If
     End Sub
     Public Sub LimpiarFormProducto()
@@ -80,6 +81,7 @@
         txtTelefono.Text = ""
         txtCorreo.Text = ""
         txtDireccion.Text = ""
+        lblMensaje.Text = ""
     End Sub
     Public Function ControldeBlancosObligatorio(todoOK As Boolean) As Boolean
 
