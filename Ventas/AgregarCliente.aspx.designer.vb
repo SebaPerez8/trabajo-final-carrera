@@ -11,16 +11,16 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class AgregarProducto
+Partial Public Class AgregarCliente
 
     '''<summary>
-    '''Control formAgregarProducto.
+    '''Control formAgregarCliente.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents formAgregarProducto As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents formAgregarCliente As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
     '''Control btnVolver.
@@ -32,13 +32,13 @@ Partial Public Class AgregarProducto
     Protected WithEvents btnVolver As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control txtProducto.
+    '''Control txtNombre.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtProducto As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control btnBuscar.

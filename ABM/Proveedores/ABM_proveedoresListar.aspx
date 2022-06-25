@@ -50,7 +50,7 @@
             <h4>Listado de proveedores</h4>
 
 
-            <asp:GridView ID="grillaProveedores" runat="server" AutoGenerateColumns="False" DataKeyNames="Razon Social,CUIT/CUIL" DataSourceID="SqlDataSource1">
+            <asp:GridView ID="grillaProveedores" runat="server" AutoGenerateColumns="False" DataKeyNames="Razon Social,CUIT/CUIL" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True">
                 <Columns>
                     <asp:BoundField DataField="Razon Social" HeaderText="Razon Social" ReadOnly="True" SortExpression="Razon Social" />
                     <asp:BoundField DataField="CUIT/CUIL" HeaderText="CUIT/CUIL" ReadOnly="True" SortExpression="CUIT/CUIL" />

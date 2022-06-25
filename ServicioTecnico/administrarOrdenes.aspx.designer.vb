@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class administrarOrdenes
+Partial Public Class AdministrarOrdenes
 
     '''<summary>
     '''Control formAdminOrdenes.
@@ -32,13 +32,31 @@ Partial Public Class administrarOrdenes
     Protected WithEvents txtOrden As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control cmbClientes.
+    '''Control lblOrden.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cmbClientes As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents lblOrden As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control txtCliente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtCliente As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblCliente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblCliente As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control btnBuscar.

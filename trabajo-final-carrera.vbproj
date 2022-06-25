@@ -102,10 +102,15 @@
     <Content Include="ABM\Proveedores\ABM_proveedoresEliminar.aspx" />
     <Content Include="ABM\Proveedores\ABM_proveedoresListar.aspx" />
     <Content Include="ABM\Proveedores\ABM_proveedoresModificar.aspx" />
-    <Content Include="ServicioTecnico\administrarOrdenes.aspx" />
+    <Content Include="Compras\Proveedores.aspx" />
+    <Content Include="Compras\Stock.aspx" />
+    <Content Include="ServicioTecnico\AdministrarOrdenes.aspx" />
     <Content Include="ABM\Clientes\ABM_clientesCargar.aspx" />
     <Content Include="ABM\Productos\ABM_productosCargar.aspx" />
     <Content Include="ABM\Proveedores\ABM_proveedoresCargar.aspx" />
+    <Content Include="ServicioTecnico\NuevaOrden.aspx" />
+    <Content Include="ServicioTecnico\Reparacion.aspx" />
+    <Content Include="ServicioTecnico\Salida.aspx" />
     <Content Include="Tema\css\sb-admin-2.css" />
     <Content Include="Tema\css\sb-admin-2.min.css" />
     <Content Include="Tema\img\logo.svg" />
@@ -1784,6 +1789,7 @@
     <Content Include="Tema\vendor\jquery\jquery.min.js" />
     <Content Include="Tema\vendor\jquery\jquery.slim.js" />
     <Content Include="Tema\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Ventas\AgregarCliente.aspx" />
     <Content Include="Ventas\AgregarProducto.aspx" />
     <Content Include="Ventas\ListaVentas.aspx" />
     <Content Include="Ventas\NuevaVenta.aspx" />
@@ -1853,11 +1859,25 @@
       <DependentUpon>ABM_proveedoresModificar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="ServicioTecnico\administrarOrdenes.aspx.designer.vb">
-      <DependentUpon>administrarOrdenes.aspx</DependentUpon>
+    <Compile Include="Compras\Proveedores.aspx.designer.vb">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ServicioTecnico\administrarOrdenes.aspx.vb">
-      <DependentUpon>administrarOrdenes.aspx</DependentUpon>
+    <Compile Include="Compras\Proveedores.aspx.vb">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Compras\Stock.aspx.designer.vb">
+      <DependentUpon>Stock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Stock.aspx.vb">
+      <DependentUpon>Stock.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ServicioTecnico\AdministrarOrdenes.aspx.designer.vb">
+      <DependentUpon>AdministrarOrdenes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioTecnico\AdministrarOrdenes.aspx.vb">
+      <DependentUpon>AdministrarOrdenes.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ABM\Clientes\ABM_clientesCargar.aspx.designer.vb">
@@ -1908,6 +1928,34 @@
     </Compile>
     <Compile Include="ABM\Proveedores\ABM_proveedoresCargar.aspx.vb">
       <DependentUpon>ABM_proveedoresCargar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ServicioTecnico\NuevaOrden.aspx.designer.vb">
+      <DependentUpon>NuevaOrden.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioTecnico\NuevaOrden.aspx.vb">
+      <DependentUpon>NuevaOrden.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ServicioTecnico\Reparacion.aspx.designer.vb">
+      <DependentUpon>Reparacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioTecnico\Reparacion.aspx.vb">
+      <DependentUpon>Reparacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ServicioTecnico\Salida.aspx.designer.vb">
+      <DependentUpon>Salida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioTecnico\Salida.aspx.vb">
+      <DependentUpon>Salida.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\AgregarCliente.aspx.designer.vb">
+      <DependentUpon>AgregarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\AgregarCliente.aspx.vb">
+      <DependentUpon>AgregarCliente.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Ventas\AgregarProducto.aspx.designer.vb">

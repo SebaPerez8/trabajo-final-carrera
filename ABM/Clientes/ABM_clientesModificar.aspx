@@ -68,7 +68,7 @@
 
         <div class="col-md-4 position-relative m-1">
             <label class="form-label">Correo electrónico</label>
-            <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email" placeholder="correo@emaill.com"></asp:TextBox>
+            <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" TextMode="Email" placeholder="correo@email.com"></asp:TextBox>
             <asp:Label ID="lblCorreo" runat="server" ForeColor="#AA0610"></asp:Label>
         </div>
 

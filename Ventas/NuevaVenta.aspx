@@ -49,15 +49,15 @@
 
         <div class="col-md-4 position-relative m-1">
             <label class="form-label">DNI</label>
-            <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control" MaxLength="8"></asp:TextBox>
+            <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control" MaxLength="8" ReadOnly="True"></asp:TextBox>
         </div>
 
         <div class="col-md-4 position-relative m-1">
             <label class="form-label" for="txtNombre">Nombre</label>
-            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
         </div>
         <asp:Button ID="btnNuevoCliente" runat="server" Text="Nuevo Cliente" CssClass="btn btn-info ml-3 mt-4 mb-1" />
-
+        <asp:Button ID="btnBuscarCliente" runat="server" Text="Buscar Cliente" CssClass="btn btn-info ml-3 mt-4 mb-1" />
         <div class="col-md-4 position-relative m-1">
             <label class="form-label">Método de pago</label>
             <asp:DropDownList ID="dplMetodo" runat="server" CssClass="form-control"></asp:DropDownList>
@@ -74,14 +74,14 @@
 
         <div class="col-md-4 position-relative m-1">
             <label class="form-label">Producto</label>
-            <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
         </div>
 
         <div class="col-md-4 position-relative m-1">
             <label class="form-label">Codigo</label>
-            <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
         </div>
-        <asp:Button ID="btnBuscarProducto" runat="server" Text="Buscar" CssClass="btn btn-info ml-3 mt-4 mb-1" />
+        <asp:Button ID="btnBuscarProducto" runat="server" Text="Buscar Producto" CssClass="btn btn-info ml-3 mt-4 mb-1" />
 
         <div class="col-md-4 position-relative m-1">
             <label class="form-label">Precio unitario</label>
