@@ -221,7 +221,7 @@
         txtProducto.Text = ""
         txtCodigo.Text = ""
         txtCantidad.Text = ""
-        txtMontoTotalProducto.Text = ""
+        txtMontoTotal.Text = ""
         txtPrecioUnitario.Text = ""
 
 
@@ -272,7 +272,7 @@
     Protected Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
 
         LimpiarCampos()
-
+    End Sub
     Protected Sub cbFormaPago_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbFormaPago.SelectedIndexChanged
         Session("MedioPago") = Convert.ToString(cbFormaPago.SelectedIndex)
     End Sub
