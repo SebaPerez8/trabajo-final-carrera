@@ -31,10 +31,11 @@
 
         <div align="center">
 
-            <asp:GridView ID="grillaProductos" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" CellSpacing="4" HorizontalAlign="Center">
+            <asp:GridView ID="grillaProductos" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" CellSpacing="4" HorizontalAlign="Center" DataKeyNames="ID_Cliente">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
-                    <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
+                     <asp:CommandField ButtonType="Button" ShowSelectButton="true"/>
+                    <asp:BoundField DataField="ID_Cliente" HeaderText="ID_Cliente" SortExpression="ID_Cliente" InsertVisible="False" ReadOnly="True" />
                     <asp:BoundField DataField="DNI" HeaderText="DNI" SortExpression="DNI" />
                     <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                 </Columns>
@@ -52,7 +53,7 @@
 
 
 
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [DNI], [Nombre] FROM [Clientes] WHERE ([Nombre] LIKE '%' + @Nombre + '%')">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT ID_Cliente,[DNI], [Nombre] FROM [Clientes] WHERE ([Nombre] LIKE '%' + @Nombre + '%')">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="txtNombre" DefaultValue="%%" Name="Nombre" PropertyName="Text" Type="String" />
                 </SelectParameters>

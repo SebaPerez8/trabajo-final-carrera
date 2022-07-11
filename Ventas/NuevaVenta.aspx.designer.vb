@@ -77,13 +77,30 @@ Partial Public Class Ventas
     Protected WithEvents dplTipo As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
+<<<<<<< seba
     '''Control txtCuotas.
+=======
+    '''Control cbFormaPago.
+>>>>>>> rama-desarrollo
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
+<<<<<<< seba
     Protected WithEvents txtCuotas As Global.System.Web.UI.WebControls.TextBox
+=======
+    Protected WithEvents cbFormaPago As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control SqlDataSource1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+>>>>>>> rama-desarrollo
 
     '''<summary>
     '''Control txtProducto.
@@ -167,7 +184,18 @@ Partial Public Class Ventas
     Protected WithEvents GrillaVentas As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control txtMontoTotalVenta.
+
+    '''Control TxtMostrarTotal.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TxtMostrarTotal As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control btnAgregar.
+
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.

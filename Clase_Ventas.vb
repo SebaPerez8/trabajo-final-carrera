@@ -11,7 +11,7 @@ Public Class Clase_Ventas
 #Region "Propiedades"
     'DEFINICIONES PARA VENTAS
     Private _ID_Detalle As Integer
-    Private _ID_Cliente As Integer
+    Private _ID_Cliente As String
     Private _ID_Medio_Pago As Integer
     Private _Monto As Decimal
     Private _Cuotas As Integer
@@ -30,11 +30,11 @@ Public Class Clase_Ventas
             _ID_Detalle = Value
         End Set
     End Property
-    Public Property ID_Cliente() As Integer
+    Public Property ID_Cliente() As String
         Get
             Return _ID_Cliente
         End Get
-        Set(ByVal Value As Integer)
+        Set(ByVal Value As String)
             _ID_Cliente = Value
         End Set
     End Property
@@ -100,34 +100,74 @@ Public Class Clase_Ventas
 
 #Region "Metodos"
 
-    Public Sub Grabar(dt As DataTable)
+    Public Sub TraerDetalle()
+
+        Try
+            'no me termina de cerrar, q si se vende 15 productos, haga 15 envios. (pero garantizamos q se haga todo junto)
+            COMANDO.CommandText = "dbo.SP_Traer_Ultimo_Detalle"
+
+            Dim DR As SqlDataReader = COMANDO.ExecuteReader()
+
+            If DR.HasRows = True Then
+                DR.Read()
+                _ID_Detalle = Convert.ToInt32(DR("ID_Detalle"))
+            End If
+            DR.Close()
+        Catch ex As Exception
+            ex.Message("Error al buscar el ultimo Detalle").ToString()
+        End Try
+
+    End Sub
+    Public Sub GrabarDetalle(dt As DataTable)
+
+        Try
+            TraerDetalle()
+
+            'no me termina de cerrar, q si se vende 15 productos, haga 15 envios. (pero garantizamos q se haga todo junto)
+            COMANDO.CommandText = "dbo.SP_InsertarDetalleVenta"
+
+            For Each row As DataRow In dt.Rows
+                COMANDO.Parameters.Clear()
+
+                COMANDO.Parameters.AddWithValue("@ID_Detalle", _ID_Detalle)
+                COMANDO.Parameters.AddWithValue("@Cod_Producto", Convert.ToInt32(row("Codigo Producto")))
+                COMANDO.Parameters.AddWithValue("@Cantidad", Convert.ToInt32(row("Cantidad")))
+                COMANDO.Parameters.AddWithValue("@Precio_Unitario", Convert.ToDecimal(row("Precio Unitario")))
+
+                COMANDO.ExecuteNonQuery()
+                COMANDO.Parameters.Clear()
+            Next
+
+        Catch ex As Exception
+            ex.Message("Error al insertar el Detalle venta").ToString()
+        End Try
+
+    End Sub
+
+    Public Sub GrabarVentas(dt As DataTable)
 
         CONECTOR.Open()
         COMANDO.Connection = CONECTOR
         COMANDO.CommandType = CommandType.StoredProcedure
 
         Try
+            GrabarDetalle(dt)
+
             'no me termina de cerrar, q si se vende 15 productos, haga 15 envios. (pero garantizamos q se haga todo junto)
+
+
             COMANDO.CommandText = "dbo.SP_InsertarVenta"
+
             COMANDO.Parameters.Clear()
 
-            COMANDO.Parameters.AddWithValue("@ID_Detalle", _ID_Detalle)
-            COMANDO.Parameters.AddWithValue("@ID_Cliente", _ID_Cliente)
-            COMANDO.Parameters.AddWithValue("@Monto", _Monto)
+                COMANDO.Parameters.AddWithValue("@ID_Cliente", _ID_Cliente)
+                COMANDO.Parameters.AddWithValue("@Monto", _Monto)
+                COMANDO.Parameters.AddWithValue("@ID_MedioPago", _ID_Medio_Pago)
             COMANDO.Parameters.AddWithValue("@Cuotas", _Cuotas)
-            COMANDO.Parameters.AddWithValue("@ID_MedioPago", _ID_Medio_Pago)
             COMANDO.Parameters.AddWithValue("@Estado_Pedido", _Estado_Pedido)
+                COMANDO.Parameters.AddWithValue("@ID_Detalle", _ID_Detalle)
 
-            For Each row As DataRow In dt.Rows
-                COMANDO.Parameters.AddWithValue("@Cod_Producto", Convert.ToInt32(row("Codigo Producto")))
-                COMANDO.Parameters.AddWithValue("@Cantidad", Convert.ToInt32(row("Cantidad")))
-                COMANDO.Parameters.AddWithValue("@Precio_Unitario", Convert.ToDecimal(row("Precio Unitario")))
-
-                COMANDO.ExecuteNonQuery()
-                'COMANDO.Parameters.Clear()
-
-                'Puede existir errores q no se limpien estos 3 parametros
-            Next
+            COMANDO.ExecuteNonQuery()
 
         Catch ex As Exception
             ex.Message("Error al insertar la venta").ToString()
