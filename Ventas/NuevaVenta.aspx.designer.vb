@@ -23,24 +23,6 @@ Partial Public Class Ventas
     Protected WithEvents formVentas As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control txtIdVenta.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtIdVenta As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control txtFecha.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtFecha As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Control txtDNI.
     '''</summary>
     '''<remarks>
@@ -77,12 +59,37 @@ Partial Public Class Ventas
     Protected WithEvents btnBuscarCliente As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control cbFormaPago.
+    '''Control dplMetodo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
+    Protected WithEvents dplMetodo As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control dplTipo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents dplTipo As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+<<<<<<< seba
+    '''Control txtCuotas.
+=======
+    '''Control cbFormaPago.
+>>>>>>> rama-desarrollo
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+<<<<<<< seba
+    Protected WithEvents txtCuotas As Global.System.Web.UI.WebControls.TextBox
+=======
     Protected WithEvents cbFormaPago As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
@@ -93,6 +100,7 @@ Partial Public Class Ventas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+>>>>>>> rama-desarrollo
 
     '''<summary>
     '''Control txtProducto.
@@ -149,31 +157,13 @@ Partial Public Class Ventas
     Protected WithEvents txtCantidad As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtMontoTotal.
+    '''Control txtMontoTotalProducto.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtMontoTotal As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control GrillaVentas.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents GrillaVentas As Global.System.Web.UI.WebControls.GridView
-
-    '''<summary>
-    '''Control TxtMostrarTotal.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents TxtMostrarTotal As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtMontoTotalProducto As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control btnAgregar.
@@ -185,13 +175,42 @@ Partial Public Class Ventas
     Protected WithEvents btnAgregar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control btnQuitar.
+    '''Control GrillaVentas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnQuitar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents GrillaVentas As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+
+    '''Control TxtMostrarTotal.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TxtMostrarTotal As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control btnAgregar.
+
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtMontoTotalVenta As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control btnLimpiar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnLimpiar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control btnConfirmar.

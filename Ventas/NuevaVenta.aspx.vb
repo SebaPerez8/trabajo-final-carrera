@@ -3,7 +3,16 @@
     Dim Venta As New Clase_Ventas
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+
+        Me.txtDNI.Text = Session("DNI")
+        Me.txtNombre.Text = Session("NombreCliente")
+
+        Me.txtProducto.Text = Session("Nombre")
+        Me.txtCodigo.Text = Session("ID_producto")
+        Me.txtPrecioUnitario.Text = Session("Precio")
+
 #Region "Cliente"
+
 
         If Not (Session("NombreCliente") Is Nothing) Then
             txtNombre.Text = TryCast(Session("NombreCliente"), String)
@@ -63,6 +72,7 @@
     End Sub
 
     Protected Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+
         If Not (txtPrecioUnitario.Text Is Nothing) Then
             If Not (txtStock.Text = "Sin Datos") Then
                 If (Val(txtStock.Text) >= Val(txtCantidad.Text)) Then
@@ -113,6 +123,7 @@
                     End If
                 Else
                     MsgBox("No se puede agregar una cantidad mayor a el stock disponible", MsgBoxStyle.Information, "AVISO")
+
                 End If
             Else
                 txtMontoTotal.Text = "No se puede calcular el Monto"
@@ -210,8 +221,10 @@
         txtProducto.Text = ""
         txtCodigo.Text = ""
         txtCantidad.Text = ""
-        txtMontoTotal.Text = ""
+        txtMontoTotalProducto.Text = ""
         txtPrecioUnitario.Text = ""
+
+
         'txtCuotas.text = 1
 
 
@@ -229,6 +242,7 @@
         GrillaVentas.DataBind()
         Session("dt") = dt
 #End Region
+
     End Sub
 
     Public Function ControldeBlancosObligatorio(todoOK As Boolean) As Boolean
@@ -254,11 +268,17 @@
         Return todoOK
     End Function
 
+
+    Protected Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+
+        LimpiarCampos()
+
     Protected Sub cbFormaPago_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbFormaPago.SelectedIndexChanged
         Session("MedioPago") = Convert.ToString(cbFormaPago.SelectedIndex)
     End Sub
 
     Protected Sub cbFormaPago_TextChanged(sender As Object, e As EventArgs) Handles cbFormaPago.TextChanged
         Session("MedioPago") = Convert.ToString(cbFormaPago.SelectedIndex)
+
     End Sub
 End Class
