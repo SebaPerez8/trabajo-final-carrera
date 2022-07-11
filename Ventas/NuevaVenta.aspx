@@ -56,11 +56,12 @@
             <label class="form-label" for="txtNombre">Nombre</label>
             <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
         </div>
-        <asp:Button ID="btnNuevoCliente" runat="server" Text="Nuevo Cliente" CssClass="btn btn-info ml-3 mt-4 mb-1" />
+        <asp:Button ID="btnNuevoCliente" runat="server" Text="Nuevo Cliente" CssClass="btn btn-info ml-3 mt-4 mb-1" TabIndex="75" />
         <asp:Button ID="btnBuscarCliente" runat="server" Text="Buscar Cliente" CssClass="btn btn-info ml-3 mt-4 mb-1" />
         <div class="col-md-4 position-relative m-1">
             <label class="form-label">Método de pago</label>
-            <asp:DropDownList ID="dplMetodo" runat="server" CssClass="form-control"></asp:DropDownList>
+            <asp:DropDownList ID="cbFormaPago" runat="server" CssClass="form-control" DataSourceID="SqlDataSource1" DataTextField="Descripcion" DataValueField="ID_Forma_Pago"></asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT [Descripcion], [ID_Forma_Pago] FROM [Forma_Pago] ORDER BY [ID_Forma_Pago] desc"></asp:SqlDataSource>
         </div>
 
 
@@ -97,7 +98,7 @@
         </div>
 
         <div class="col-md-4 position-relative m-1">
-            <label class="form-label">Monto Total</label>
+            <label class="form-label">Monto Total del Producto</label>
             <asp:TextBox ID="txtMontoTotal" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
             <br />
             <asp:GridView ID="GrillaVentas" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Width="380px">
@@ -110,10 +111,13 @@
                 <SortedAscendingHeaderStyle BackColor="#007DBB" />
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
-            </asp:GridView>
+            </asp:GridView>       
+            <br />
+            <label class="form-label">Monto Total</label>
+            <asp:TextBox ID="TxtMostrarTotal" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
             <br />
         </div>
-
+        
 
 
 
