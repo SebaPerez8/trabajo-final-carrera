@@ -3,6 +3,12 @@
     Dim Venta As New Clase_Ventas
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        Me.txtDNI.Text = Session("DNI")
+        Me.txtNombre.Text = Session("NombreCliente")
+
+        Me.txtProducto.Text = Session("Nombre")
+        Me.txtCodigo.Text = Session("ID_producto")
+        Me.txtPrecioUnitario.Text = Session("Precio")
 
         If Not (Session("Nombre") Is Nothing) Then
             txtProducto.Text = TryCast(Session("Nombre"), String)
@@ -53,7 +59,7 @@
                     Row1("Producto") = Convert.ToString(txtProducto.Text)
                     Row1("Cantidad") = Convert.ToString(txtCantidad.Text)
                     Row1("Precio Unitario") = Convert.ToString(txtPrecioUnitario.Text)
-                    Row1("Precio Total") = Convert.ToString(txtMontoTotal.Text)
+                    Row1("Precio Total") = Convert.ToString(txtMontoTotalProducto.Text)
                     dt.Rows.Add(Row1)
                     GrillaVentas.DataSource = dt
                     GrillaVentas.DataBind()
@@ -66,7 +72,7 @@
                     Row1("Producto") = Convert.ToString(txtProducto.Text)
                     Row1("Cantidad") = Convert.ToString(txtCantidad.Text)
                     Row1("Precio Unitario") = Convert.ToString(txtPrecioUnitario.Text)
-                    Row1("Precio Total") = Convert.ToString(txtMontoTotal.Text)
+                    Row1("Precio Total") = Convert.ToString(txtMontoTotalProducto.Text)
                     dt.Rows.Add(Row1)
                     GrillaVentas.DataSource = dt
                     GrillaVentas.DataBind()
@@ -95,14 +101,14 @@
         If Not (txtPrecioUnitario.Text Is Nothing) Then
             If Not (txtStock.Text = "Sin Datos") Then
                 If (Val(txtStock.Text) >= Val(txtCantidad.Text)) Then
-                    txtMontoTotal.Text = Val(txtPrecioUnitario.Text) * Val(txtCantidad.Text)
+                    txtMontoTotalProducto.Text = Val(txtPrecioUnitario.Text) * Val(txtCantidad.Text)
                 Else
                     MsgBox("No se puede agregar una cantidad mayor a el stock disponible", MsgBoxStyle.Information, "AVISO")
 
                 End If
 
             Else
-                txtMontoTotal.Text = "No se puede calcular el Monto"
+                txtMontoTotalProducto.Text = "No se puede calcular el Monto"
             End If
         End If
 
@@ -162,8 +168,10 @@
         txtProducto.Text = ""
         txtCodigo.Text = ""
         txtCantidad.Text = ""
-        txtMontoTotal.Text = ""
+        txtMontoTotalProducto.Text = ""
         txtPrecioUnitario.Text = ""
+        txtMontoTotalVenta.Text = ""
+
     End Sub
 
     Public Function ControldeBlancosObligatorio(todoOK As Boolean) As Boolean
@@ -183,4 +191,10 @@
 
         Return todoOK
     End Function
+
+    Protected Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+
+        LimpiarCampos()
+
+    End Sub
 End Class

@@ -23,4 +23,5 @@
         Response.Redirect("NuevaVenta.aspx")
 
     End Sub
+
 End Class
