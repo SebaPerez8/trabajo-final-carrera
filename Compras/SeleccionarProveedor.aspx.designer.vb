@@ -11,16 +11,25 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Proveedores1
+Partial Public Class SeleccionarProveedor
 
     '''<summary>
-    '''Control formProveedoresCompras.
+    '''Control formSelectProveedor.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents formProveedoresCompras As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents formSelectProveedor As Global.System.Web.UI.HtmlControls.HtmlForm
+
+    '''<summary>
+    '''Control btnVolver.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnVolver As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control txtProveedor.
@@ -41,20 +50,20 @@ Partial Public Class Proveedores1
     Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control txtRecibo.
+    '''Control grillaProveedores.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtRecibo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents grillaProveedores As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control btnGuardar.
+    '''Control SqlDataSource.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnGuardar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents SqlDataSource As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

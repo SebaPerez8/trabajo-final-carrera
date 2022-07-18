@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="AgregarCliente.aspx.vb" Inherits="trabajo_final_carrera.AgregarCliente" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="SeleccionarProducto.aspx.vb" Inherits="trabajo_final_carrera.SeleccionarProducto" %>
 
 <!DOCTYPE html>
 
@@ -11,33 +11,34 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agregar Cliente</title>
+    <title>Seleccionar Producto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-    <form id="formAgregarCliente" runat="server" class="mt-3">
-
-        <div class="container-fluid">
+   <form id="formSelectProducto" runat="server" class="mt-3">
+       
+          <div class="container-fluid">
             <asp:Button ID="btnVolver" runat="server" Text="<< Volver" CssClass="btn btn-danger ml-3 mt-4 mb-1"/>
-            <label class="form-label row justify-content-center">Nombre Cliente</label>
+            <label class="form-label row justify-content-center">Producto</label>
             <div class="row justify-content-center">
-                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" MaxLength="13" Width="300px"></asp:TextBox>
+                <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control" MaxLength="13" Width="300px"></asp:TextBox>
             </div>
             <div align="center" class="mb-5">
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info m-3 pl-5 pr-5" />
             </div>
         </div>
 
-        <div align="center">
+       <div align="center">
 
-            <asp:GridView ID="grillaCliente" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" CellSpacing="4" HorizontalAlign="Center" DataKeyNames="ID_Cliente">
+            <asp:GridView ID="grillaProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="ID_producto" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" CellSpacing="4" HorizontalAlign="Center">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
-                     <asp:CommandField ButtonType="Button" ShowSelectButton="true"/>
-                    <asp:BoundField DataField="ID_Cliente" HeaderText="ID_Cliente" SortExpression="ID_Cliente" InsertVisible="False" ReadOnly="True" />
-                    <asp:BoundField DataField="DNI" HeaderText="DNI" SortExpression="DNI" />
+                    <asp:CommandField ButtonType="Button" ShowSelectButton="true"/>
+                    <asp:BoundField DataField="ID_producto" HeaderText="ID_producto" ReadOnly="True" SortExpression="ID_producto" />
                     <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                    <asp:BoundField DataField="Precio" HeaderText="Precio" SortExpression="Precio" />
+                    <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" SortExpression="Cantidad" />
                 </Columns>
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -53,13 +54,16 @@
 
 
 
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT ID_Cliente,[DNI], [Nombre] FROM [Clientes] WHERE ([Nombre] LIKE '%' + @Nombre + '%')">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT P.[ID_producto], [Nombre], [Precio],SP.Cantidad 
+FROM [Productos] P left join [Stock_Producto] SP on p.ID_producto = SP.ID_producto 
+WHERE ([Nombre] LIKE '%' + @Nombre + '%') ORDER BY [ID_producto]">
                 <SelectParameters>
-                    <asp:ControlParameter ControlID="txtNombre" DefaultValue="%%" Name="Nombre" PropertyName="Text" Type="String" />
+                    <asp:ControlParameter ControlID="txtProducto" DefaultValue="%%" Name="Nombre" PropertyName="Text" Type="String" />
                 </SelectParameters>
                 
             </asp:SqlDataSource>
         </div>
+
     </form>
 </body>
 </html>

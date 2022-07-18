@@ -11,25 +11,34 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Proveedores1
+Partial Public Class SeleccionarProducto
 
     '''<summary>
-    '''Control formProveedoresCompras.
+    '''Control formSelectProducto.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents formProveedoresCompras As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents formSelectProducto As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control txtProveedor.
+    '''Control btnVolver.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtProveedor As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnVolver As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control txtProducto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtProducto As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control btnBuscar.
@@ -41,20 +50,20 @@ Partial Public Class Proveedores1
     Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control txtRecibo.
+    '''Control grillaProductos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtRecibo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents grillaProductos As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control btnGuardar.
+    '''Control SqlDataSource1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnGuardar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

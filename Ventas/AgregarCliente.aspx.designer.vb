@@ -50,13 +50,13 @@ Partial Public Class AgregarCliente
     Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control grillaProductos.
+    '''Control grillaCliente.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents grillaProductos As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents grillaCliente As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
     '''Control SqlDataSource1.

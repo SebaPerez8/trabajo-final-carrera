@@ -5,4 +5,7 @@
 
     End Sub
 
+    Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Response.Redirect("SeleccionarProducto.aspx")
+    End Sub
 End Class
