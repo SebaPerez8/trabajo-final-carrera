@@ -33,13 +33,22 @@
         </div>
         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info pl-3 pr-3 ml-3 mr-3 mt-4 mb-1" />
 
-
         <div class="col-md-3 position-relative m-1">
-            <label class="form-label">Recibo de Compra</label>
-            <asp:TextBox ID="txtRecibo" runat="server" CssClass="form-control"></asp:TextBox>
-        </div>
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar cambios" CssClass="btn btn-success pl-3 pr-3 ml-3 mr-3 mt-4 mb-1" />
 
+            <label class="form-label">Recibo de compra</label>
+            <asp:FileUpload ID="fuRecibo" runat="server" CssClass="btn-secondary p-1" />
+            <asp:Label ID="lblRecibo" runat="server" ForeColor="#AA0610"></asp:Label>
+
+        </div>
+
+        <div class="col-md-4 position-relative m-1">
+            <asp:Button ID="btnGuardar" runat="server" Text="Guardar cambios" CssClass="btn btn-success pl-3 pr-3 ml-3 mr-3 mt-4 mb-1" />
+        </div>
+
+         <div class="col-md-4 position-relative m-1">
+             <asp:GridView ID="grillaRecibos" runat="server"></asp:GridView>
+         
+         </div>
 
     </form>
 

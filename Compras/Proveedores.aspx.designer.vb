@@ -41,13 +41,22 @@ Partial Public Class Proveedores1
     Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control txtRecibo.
+    '''Control fuRecibo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtRecibo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents fuRecibo As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
+    '''Control lblRecibo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblRecibo As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control btnGuardar.
@@ -57,4 +66,13 @@ Partial Public Class Proveedores1
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnGuardar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control grillaRecibos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents grillaRecibos As Global.System.Web.UI.WebControls.GridView
 End Class
