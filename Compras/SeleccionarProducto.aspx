@@ -31,37 +31,38 @@
 
        <div align="center">
 
-            <asp:GridView ID="grillaProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="ID_producto" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" CellSpacing="4" HorizontalAlign="Center">
-                <AlternatingRowStyle BackColor="White" />
-                <Columns>
-                    <asp:CommandField ButtonType="Button" ShowSelectButton="true"/>
-                    <asp:BoundField DataField="ID_producto" HeaderText="ID_producto" ReadOnly="True" SortExpression="ID_producto" />
-                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                    <asp:BoundField DataField="Precio" HeaderText="Precio" SortExpression="Precio" />
-                    <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" SortExpression="Cantidad" />
-                </Columns>
-                <EditRowStyle BackColor="#2461BF" />
-                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#EFF3FB" />
-                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                <SortedDescendingHeaderStyle BackColor="#4870BE" />
-            </asp:GridView>
+           <asp:GridView ID="grillaProductos" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID_producto" DataSourceID="SqlDataSource" ForeColor="#333333" GridLines="None">
+               <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+               <Columns>
+                   <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
+                   <asp:BoundField DataField="ID_producto" HeaderText="ID_producto" ReadOnly="True" SortExpression="ID_producto" />
+                   <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                   <asp:BoundField DataField="Precio" HeaderText="Precio" SortExpression="Precio" />
+                   <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" SortExpression="Cantidad" />
+                   <asp:BoundField DataField="Categoria" HeaderText="Categoria" SortExpression="Categoria" />
+               </Columns>
+               <EditRowStyle BackColor="#999999" />
+               <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+               <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+               <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+               <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+               <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+               <SortedAscendingCellStyle BackColor="#E9E7E2" />
+               <SortedAscendingHeaderStyle BackColor="#506C8C" />
+               <SortedDescendingCellStyle BackColor="#FFFDF8" />
+               <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+           </asp:GridView>
 
+           <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT p.[ID_producto], p.[Nombre], p.[Precio], sp.Cantidad, c.Nombre AS &quot;Categoria&quot;
+FROM [Productos] p
+INNER JOIN [Stock_Producto] sp ON p.ID_producto = sp.ID_producto
+INNER JOIN [Categorias] c ON p.ID_Categoria = c.ID_Categoria
+WHERE (p.[Nombre] LIKE '%' + @Nombre + '%')">
+               <SelectParameters>
+                   <asp:ControlParameter ControlID="txtProducto" DefaultValue="%%" Name="Nombre" PropertyName="Text" />
+               </SelectParameters>
+           </asp:SqlDataSource>
 
-
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CADENA %>" SelectCommand="SELECT P.[ID_producto], [Nombre], [Precio],SP.Cantidad 
-FROM [Productos] P left join [Stock_Producto] SP on p.ID_producto = SP.ID_producto 
-WHERE ([Nombre] LIKE '%' + @Nombre + '%') ORDER BY [ID_producto]">
-                <SelectParameters>
-                    <asp:ControlParameter ControlID="txtProducto" DefaultValue="%%" Name="Nombre" PropertyName="Text" Type="String" />
-                </SelectParameters>
-                
-            </asp:SqlDataSource>
         </div>
 
     </form>
