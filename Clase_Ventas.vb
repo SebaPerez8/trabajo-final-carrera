@@ -129,13 +129,18 @@ Public Class Clase_Ventas
             For Each row As DataRow In dt.Rows
                 COMANDO.Parameters.Clear()
 
-                COMANDO.Parameters.AddWithValue("@ID_Detalle", _ID_Detalle)
-                COMANDO.Parameters.AddWithValue("@Cod_Producto", Convert.ToInt32(row("Codigo Producto")))
-                COMANDO.Parameters.AddWithValue("@Cantidad", Convert.ToInt32(row("Cantidad")))
-                COMANDO.Parameters.AddWithValue("@Precio_Unitario", Convert.ToDecimal(row("Precio Unitario")))
+                If Not ((row("Cantidad") = 0) And row("Producto") = "Eliminado") Then
 
-                COMANDO.ExecuteNonQuery()
-                COMANDO.Parameters.Clear()
+                    COMANDO.Parameters.AddWithValue("@ID_Detalle", _ID_Detalle)
+                    COMANDO.Parameters.AddWithValue("@Cod_Producto", Convert.ToInt32(row("Codigo Producto")))
+                    COMANDO.Parameters.AddWithValue("@Cantidad", Convert.ToInt32(row("Cantidad")))
+                    COMANDO.Parameters.AddWithValue("@Precio_Unitario", Convert.ToDecimal(row("Precio Unitario")))
+
+                    COMANDO.ExecuteNonQuery()
+                    COMANDO.Parameters.Clear()
+
+                End If
+
             Next
 
         Catch ex As Exception

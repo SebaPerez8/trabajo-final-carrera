@@ -114,10 +114,7 @@
             <div class="col-md-4 position-relative m-1 mt-4">
                 <asp:GridView ID="GrillaVentas" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Width="380px">
                     <Columns>
-                        <asp:ButtonField ButtonType="Button" Text="Quitar">
-                            <ControlStyle BackColor="#CC0000" Font-Bold="True" ForeColor="White" />
-                            <ItemStyle BackColor="White" Font-Bold="True" ForeColor="White" />
-                        </asp:ButtonField>
+                         <asp:CommandField ButtonType="Button" ShowSelectButton="true"/>
                     </Columns>
                     <FooterStyle BackColor="White" ForeColor="#000066" />
                     <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />

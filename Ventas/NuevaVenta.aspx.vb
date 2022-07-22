@@ -23,6 +23,11 @@
         If Not (Session("MedioPago") Is Nothing) Then
             cbFormaPago.SelectedIndex = Convert.ToInt32(TryCast(Session("MedioPago"), String))
         End If
+        If Not (Session("Cuotas") Is Nothing) Then
+            txtCuotas.Text = TryCast(Session("Cuotas"), String)
+        Else
+            txtCuotas.Text = 1
+        End If
 #End Region
 
 #Region "Producto"
@@ -73,61 +78,74 @@
 
     Protected Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
 
-        If Not (txtPrecioUnitario.Text Is Nothing) Then
-            If Not (txtStock.Text = "Sin Datos") Then
-                If (Val(txtStock.Text) >= Val(txtCantidad.Text)) Then
-                    txtMontoTotal.Text = Convert.ToDouble(Convert.ToDouble(Val(txtPrecioUnitario.Text)) * Convert.ToDouble(Val(txtCantidad.Text)))
+        If Not (txtPrecioUnitario.Text Is Nothing) And Not (Session("ID_producto") Is Nothing) Then
+
+            If Not (txtCantidad.Text Is Nothing) Then
+                If Convert.ToString(txtCantidad.Text) <> "" Then
                     If Not (txtStock.Text = "Sin Datos") Then
-                        If (Val(txtStock.Text) > 0) Then
-                            If Session("dt") Is Nothing Then
-                                Dim dt As DataTable = filldata()
-                                Dim Row1 As DataRow
-                                Row1 = dt.NewRow()
-                                Row1("Codigo Producto") = Convert.ToString(txtCodigo.Text)
-                                Row1("Producto") = Convert.ToString(txtProducto.Text)
-                                Row1("Cantidad") = Convert.ToString(txtCantidad.Text)
-                                Row1("Precio Unitario") = Convert.ToString(txtPrecioUnitario.Text)
-                                Row1("Precio Total") = Convert.ToString(txtMontoTotal.Text)
-                                dt.Rows.Add(Row1)
-                                GrillaVentas.DataSource = dt
-                                GrillaVentas.DataBind()
-                                Session("dt") = dt
-                                Session("MontoTotal") = SumarMonto(dt)
-                                If Not (Session("MontoTotal") Is Nothing) Then
-                                    TxtMostrarTotal.Text = TryCast(Session("MontoTotal"), String)
+                        If (Val(txtStock.Text) >= Val(txtCantidad.Text)) Then
+                            txtMontoTotal.Text = Convert.ToDecimal(txtPrecioUnitario.Text) * Convert.ToInt32(txtCantidad.Text)
+                            If Not (txtStock.Text = "Sin Datos") Then
+                                If (Val(txtStock.Text) > 0) Then
+                                    If Session("dt") Is Nothing Then
+                                        Dim dt As DataTable = filldata()
+                                        Dim Row1 As DataRow
+                                        Row1 = dt.NewRow()
+                                        Row1("Codigo Producto") = Convert.ToString(txtCodigo.Text)
+                                        Row1("Producto") = Convert.ToString(txtProducto.Text)
+                                        Row1("Cantidad") = Convert.ToString(txtCantidad.Text)
+                                        Row1("Precio Unitario") = Convert.ToString(txtPrecioUnitario.Text)
+                                        Row1("Precio Total") = Convert.ToString(txtMontoTotal.Text)
+                                        dt.Rows.Add(Row1)
+                                        GrillaVentas.DataSource = dt
+                                        GrillaVentas.DataBind()
+                                        Session("dt") = dt
+                                        Session("MontoTotal") = SumarMonto(dt)
+                                        If Not (Session("MontoTotal") Is Nothing) Then
+                                            TxtMostrarTotal.Text = TryCast(Session("MontoTotal"), String)
+                                        End If
+                                    Else
+                                        Dim dt As DataTable = TryCast(Session("dt"), DataTable)
+                                        Dim Row1 As DataRow
+
+                                        Row1 = dt.NewRow()
+                                        Row1("Codigo Producto") = Convert.ToString(txtCodigo.Text)
+                                        Row1("Producto") = Convert.ToString(txtProducto.Text)
+                                        Row1("Cantidad") = Convert.ToString(txtCantidad.Text)
+                                        Row1("Precio Unitario") = Convert.ToString(txtPrecioUnitario.Text)
+                                        Row1("Precio Total") = Convert.ToString(txtMontoTotal.Text)
+                                        dt.Rows.Add(Row1)
+                                        GrillaVentas.DataSource = dt
+                                        GrillaVentas.DataBind()
+                                        Session("dt") = dt
+                                        Session("MontoTotal") = SumarMonto(dt)
+                                        If Not (Session("MontoTotal") Is Nothing) Then
+                                            TxtMostrarTotal.Text = TryCast(Session("MontoTotal"), String)
+                                        End If
+                                    End If
+                                    LimpiarInputAgregar()
+                                Else
+                                    MsgBox("El producto no tiene Stock", MsgBoxStyle.Exclamation, "AVISO")
                                 End If
                             Else
-                                Dim dt As DataTable = TryCast(Session("dt"), DataTable)
-                                Dim Row1 As DataRow
-                                Row1 = dt.NewRow()
-                                Row1("Codigo Producto") = Convert.ToString(txtCodigo.Text)
-                                Row1("Producto") = Convert.ToString(txtProducto.Text)
-                                Row1("Cantidad") = Convert.ToString(txtCantidad.Text)
-                                Row1("Precio Unitario") = Convert.ToString(txtPrecioUnitario.Text)
-                                Row1("Precio Total") = Convert.ToString(txtMontoTotal.Text)
-                                dt.Rows.Add(Row1)
-                                GrillaVentas.DataSource = dt
-                                GrillaVentas.DataBind()
-                                Session("dt") = dt
-                                Session("MontoTotal") = SumarMonto(dt)
-                                If Not (Session("MontoTotal") Is Nothing) Then
-                                    TxtMostrarTotal.Text = TryCast(Session("MontoTotal"), String)
-                                End If
+                                MsgBox("No se puede agregar el Producto", MsgBoxStyle.Exclamation, "AVISO")
                             End If
-                            LimpiarInputAgregar()
                         Else
-                            MsgBox("El producto no tiene Stock", MsgBoxStyle.Exclamation, "AVISO")
+                            MsgBox("No se puede agregar una cantidad mayor a el stock disponible", MsgBoxStyle.Information, "AVISO")
+
                         End If
                     Else
-                        MsgBox("No se puede agregar el Producto", MsgBoxStyle.Exclamation, "AVISO")
+                        txtMontoTotal.Text = "No se puede calcular el Monto"
                     End If
                 Else
-                    MsgBox("No se puede agregar una cantidad mayor a el stock disponible", MsgBoxStyle.Information, "AVISO")
-
+                    MsgBox("No ingreso una cantidad para ese producto", MsgBoxStyle.Exclamation, "AVISO")
                 End If
             Else
-                txtMontoTotal.Text = "No se puede calcular el Monto"
+                MsgBox("No ingreso una cantidad para ese producto", MsgBoxStyle.Exclamation, "AVISO")
             End If
+
+        Else
+                MsgBox("No existe un Producto para agregar", MsgBoxStyle.Exclamation, "AVISO")
         End If
     End Sub
     Public Function SumarMonto(DT As DataTable) As String
@@ -152,30 +170,36 @@
     Protected Sub btnConfirmar_Click(sender As Object, e As EventArgs) Handles btnConfirmar.Click
         Dim ResultadoMensaje As Integer = 0
         Dim Control1 As Boolean = True
+        Dim Control2 As Boolean = True
         Dim dt As DataTable = TryCast(Session("dt"), DataTable)
-        If (GrillaVentas.Rows.Count > 0) Then
+        GrillaVentas.DataSource = dt
+        If (dt.Rows.Count > 0) Then
             If Not (Session("MedioPago") = "0") AndAlso Not (Session("MedioPago") Is Nothing) Then
 
                 If ControldeBlancosObligatorio(Control1) Then
-
-                    Venta.ID_Cliente = Convert.ToInt32(TryCast(Session("ID_Cliente"), String))
-                    Venta.Monto = Convert.ToDecimal(TryCast(Session("MontoTotal"), String))
-                    Venta.Cuotas = 1
-                    'Venta.Cuotas=Convert.ToInt32(TryCast(Session("Cuotas"), String))
-                    Venta.ID_Medio_Pago = Session("MedioPago")
-                    Venta.Estado_Pedido = "Entregado"
+                    If ControlMontoTotal(Control2) Then
 
 
-                    ResultadoMensaje = MsgBox("Esta por confirmar la venta, ¿Desea Continuar?", MsgBoxStyle.YesNo, "AVISO")
-                    If ResultadoMensaje = 1 OrElse ResultadoMensaje = 6 Then
-                        Try
+                        Venta.ID_Cliente = Convert.ToInt32(TryCast(Session("ID_Cliente"), String))
+                        Venta.Monto = Convert.ToDecimal(TryCast(Session("MontoTotal"), String))
+                        'Venta.Cuotas = 1
+                        Venta.Cuotas = Convert.ToInt32(TryCast(Session("Cuotas"), String))
+                        Venta.ID_Medio_Pago = Session("MedioPago")
+                        Venta.Estado_Pedido = "Entregado"
 
-                            Venta.GrabarVentas(dt)
-                            MsgBox("Se realizo con Exito la carga de la Venta", MsgBoxStyle.Information, "AVISO")
-                            LimpiarCampos()
-                        Catch ex As Exception
-                            MsgBox("Hubo un problema, No se pudo cargar la venta", MsgBoxStyle.Exclamation, "AVISO")
-                        End Try
+
+                        ResultadoMensaje = MsgBox("Esta por confirmar la venta, ¿Desea Continuar?", MsgBoxStyle.YesNo, "AVISO")
+                        If ResultadoMensaje = 1 OrElse ResultadoMensaje = 6 Then
+                            Try
+
+                                Venta.GrabarVentas(dt)
+                                MsgBox("Se realizo con Exito la carga de la Venta", MsgBoxStyle.Information, "AVISO")
+                                LimpiarCampos()
+                            Catch ex As Exception
+                                MsgBox("Hubo un problema, No se pudo cargar la venta", MsgBoxStyle.Exclamation, "AVISO")
+                            End Try
+                        End If
+                        MsgBox("Se ha cancelado la Venta", MsgBoxStyle.Information, "AVISO")
                     End If
                 Else
                     MsgBox("Existen campos obligatorios incompletos, por favor completar", MsgBoxStyle.Information, "AVISO")
@@ -192,12 +216,16 @@
     Public Sub LimpiarInputAgregar()
 
         'Input en el Agregar Producto
-        txtStock.Text = ""
-        txtProducto.Text = ""
-        txtCodigo.Text = ""
-        txtCantidad.Text = ""
-        txtMontoTotal.Text = ""
-        txtPrecioUnitario.Text = ""
+        txtStock.Text = Nothing
+        txtProducto.Text = Nothing
+        txtCodigo.Text = Nothing
+        txtCantidad.Text = Nothing
+        txtMontoTotal.Text = Nothing
+        txtPrecioUnitario.Text = Nothing
+        Session("Nombre") = Nothing
+        Session("Precio") = Nothing
+        Session("Stock") = Nothing
+        Session("ID_producto") = Nothing
     End Sub
     Public Sub LimpiarCampos()
 
@@ -248,18 +276,12 @@
     Public Function ControldeBlancosObligatorio(todoOK As Boolean) As Boolean
         'Los campos obligatorios son--> El cliente
         'falta incluir el cliente.
-
-        If txtCodigo.Text = "" OrElse IsDBNull(txtCodigo) Then
-            todoOK = False
-            txtCodigo.CssClass = txtCodigo.CssClass + " is-invalid"
-
+        If Not (Session("MontoTotal") Is Nothing) Then
+            TxtMostrarTotal.Text = Convert.ToString(TryCast(Session("MontoTotal"), String))
+            If TxtMostrarTotal.Text = "0" Then
+                todoOK = False
+            End If
         End If
-        If txtProducto.Text = "" OrElse IsDBNull(txtProducto) Then
-            todoOK = False
-            txtProducto.CssClass = txtProducto.CssClass + " is-invalid"
-
-        End If
-
         If (Session("ID_Cliente") Is Nothing) Then
             todoOK = False
             txtDNI.CssClass = txtDNI.CssClass + " is-invalid"
@@ -268,7 +290,16 @@
         Return todoOK
     End Function
 
+    Public Function ControlMontoTotal(todoOK As Boolean) As Boolean
+        If Not (Session("MontoTotal") Is Nothing) Then
+            TxtMostrarTotal.Text = Convert.ToString(TryCast(Session("MontoTotal"), String))
+            If TxtMostrarTotal.Text = "0" Then
+                todoOK = False
+            End If
+        End If
 
+        Return todoOK
+    End Function
     Protected Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
 
         LimpiarCampos()
@@ -280,5 +311,43 @@
     Protected Sub cbFormaPago_TextChanged(sender As Object, e As EventArgs) Handles cbFormaPago.TextChanged
         Session("MedioPago") = Convert.ToString(cbFormaPago.SelectedIndex)
 
+    End Sub
+
+    Protected Sub GrillaVentas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GrillaVentas.SelectedIndexChanged
+        Dim dt As DataTable = TryCast(Session("dt"), DataTable)
+
+        For Each Row As DataRow In dt.Rows
+            If (GrillaVentas.Rows.Count > 0) Then
+                If String.Compare(Row("Codigo Producto").ToString(), GrillaVentas.SelectedRow.Cells(1).Text) = 0 Then
+                    If String.Compare(Row("Cantidad").ToString(), GrillaVentas.SelectedRow.Cells(3).Text) = 0 Then
+
+                        Row("Cantidad") = 0
+                        Row("Precio Total") = 0
+                        Row("Producto") = "Eliminado"
+                        GrillaVentas.DataSource = dt
+
+                        GrillaVentas.DataBind()
+                        Session("dt") = dt
+                        Session("MontoTotal") = SumarMonto(dt)
+                        If Not (Session("MontoTotal") Is Nothing) Then
+                            TxtMostrarTotal.Text = TryCast(Session("MontoTotal"), String)
+                        End If
+                    End If
+                End If
+            End If
+        Next
+        LimpiarInputAgregar()
+    End Sub
+
+    Protected Sub GrillaVentas_SelectedIndexChanging(sender As Object, e As GridViewSelectEventArgs) Handles GrillaVentas.SelectedIndexChanging
+
+    End Sub
+
+    Protected Sub txtCuotas_TextChanged(sender As Object, e As EventArgs) Handles txtCuotas.TextChanged
+        If Not (Session("Cuotas") Is Nothing) Then
+            txtCuotas.Text = TryCast(Session("Cuotas"), String)
+        Else
+            txtCuotas.Text = 1
+        End If
     End Sub
 End Class
