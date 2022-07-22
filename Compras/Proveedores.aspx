@@ -41,9 +41,14 @@
 
         </div>
 
-        <div class="col-md-4 position-relative m-1">
-            <asp:Button ID="btnGuardar" runat="server" Text="Guardar cambios" CssClass="btn btn-success pl-3 pr-3 ml-3 mr-3 mt-4 mb-1" />
+         <div class="col-md-4 position-relative m-1">
+            <asp:Button ID="btnListar" runat="server" Text="Listar" CssClass="btn btn-info pl-3 pr-3 mt-4 mb-1" />
         </div>
+
+        <div class="col-md-4 position-relative m-1">
+            <asp:Button ID="btnGuardar" runat="server" Text="Guardar cambios" CssClass="btn btn-success pl-3 pr-3 mt-4 mb-1" />
+        </div>
+
 
          <div class="col-md-4 position-relative m-1">
              <asp:GridView ID="grillaRecibos" runat="server"></asp:GridView>

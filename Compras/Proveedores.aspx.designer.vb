@@ -59,6 +59,15 @@ Partial Public Class Proveedores1
     Protected WithEvents lblRecibo As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control btnListar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnListar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control btnGuardar.
     '''</summary>
     '''<remarks>
