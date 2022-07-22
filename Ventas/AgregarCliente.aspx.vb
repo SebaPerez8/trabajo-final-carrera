@@ -9,11 +9,11 @@
         Response.Redirect("NuevaVenta.aspx")
     End Sub
 
-    Protected Sub grillaProductos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles grillaProductos.SelectedIndexChanged
+    Protected Sub grillaProductos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles grillaCliente.SelectedIndexChanged
 
-        Session("DNI") = grillaProductos.SelectedRow.Cells(2).Text
-        Session("NombreCliente") = grillaProductos.SelectedRow.Cells(3).Text
-        Session("ID_Cliente") = grillaProductos.SelectedRow.Cells(1).Text
+        Session("DNI") = grillaCliente.SelectedRow.Cells(2).Text
+        Session("NombreCliente") = grillaCliente.SelectedRow.Cells(3).Text
+        Session("ID_Cliente") = grillaCliente.SelectedRow.Cells(1).Text
         Response.Redirect("NuevaVenta.aspx")
     End Sub
 End Class

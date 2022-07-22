@@ -31,7 +31,7 @@
 
         <div align="center">
 
-            <asp:GridView ID="grillaProductos" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" CellSpacing="4" HorizontalAlign="Center" DataKeyNames="ID_Cliente">
+            <asp:GridView ID="grillaCliente" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" CellSpacing="4" HorizontalAlign="Center" DataKeyNames="ID_Cliente">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                      <asp:CommandField ButtonType="Button" ShowSelectButton="true"/>

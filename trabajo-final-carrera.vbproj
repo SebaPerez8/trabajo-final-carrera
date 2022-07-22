@@ -103,6 +103,8 @@
     <Content Include="ABM\Proveedores\ABM_proveedoresListar.aspx" />
     <Content Include="ABM\Proveedores\ABM_proveedoresModificar.aspx" />
     <Content Include="Compras\Proveedores.aspx" />
+    <Content Include="Compras\SeleccionarProducto.aspx" />
+    <Content Include="Compras\SeleccionarProveedor.aspx" />
     <Content Include="Compras\Stock.aspx" />
     <Content Include="ServicioTecnico\AdministrarOrdenes.aspx" />
     <Content Include="ABM\Clientes\ABM_clientesCargar.aspx" />
@@ -1864,6 +1866,20 @@
     </Compile>
     <Compile Include="Compras\Proveedores.aspx.vb">
       <DependentUpon>Proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Compras\SeleccionarProducto.aspx.designer.vb">
+      <DependentUpon>SeleccionarProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\SeleccionarProducto.aspx.vb">
+      <DependentUpon>SeleccionarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Compras\SeleccionarProveedor.aspx.designer.vb">
+      <DependentUpon>SeleccionarProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\SeleccionarProveedor.aspx.vb">
+      <DependentUpon>SeleccionarProveedor.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Compras\Stock.aspx.designer.vb">

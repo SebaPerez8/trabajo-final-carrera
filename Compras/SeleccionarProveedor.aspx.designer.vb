@@ -11,25 +11,34 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Stock
+Partial Public Class SeleccionarProveedor
 
     '''<summary>
-    '''Control formStock.
+    '''Control formSelectProveedor.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents formStock As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents formSelectProveedor As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control txtProducto.
+    '''Control btnVolver.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtProducto As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnVolver As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control txtProveedor.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtProveedor As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control btnBuscar.
@@ -41,56 +50,20 @@ Partial Public Class Stock
     Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control txtCategoria.
+    '''Control grillaProveedores.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtCategoria As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents grillaProveedores As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control txtPrecio.
+    '''Control SqlDataSource.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtPrecio As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control txtStock.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtStock As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control btnGuardar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnGuardar As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control btnListar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnListar As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control grillaStock.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents grillaStock As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents SqlDataSource As Global.System.Web.UI.WebControls.SqlDataSource
 End Class
