@@ -22,7 +22,7 @@ Public Class productos
                 ResultadoMensaje = MsgBox("Existen campos incompletos, ¿Desea Continuar?", MsgBoxStyle.YesNo, "AVISO")
                 If ResultadoMensaje = 1 OrElse ResultadoMensaje = 6 Then
                     'guarda sin importar q exista campos nulos.
-                    Producto.Precio_Producto = Val(txtPrecio.Text)
+                    Producto.Precio_Producto = Convert.ToDecimal(Val(txtPrecio.Text))
                     Producto.Nombre_Producto = txtProducto.Text
                     Producto.Categoria = dplCategoria.SelectedValue
 
